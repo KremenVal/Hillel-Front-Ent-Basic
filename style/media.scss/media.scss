@@ -14,11 +14,31 @@
 	html {
 		font-size: 0.57rem;
 	}
+
+	body {
+		.possibilities-container {
+			.possibilities-content {
+				.possibilities-item {
+					margin-right: 4.3rem;
+				}
+			}
+		}
+	}
 }
 
 @media screen and (min-width: 410px) {
 	html {
 		font-size: 0.68rem;
+	}
+
+	body {
+		.possibilities-container {
+			.possibilities-content {
+				.possibilities-item {
+					margin-right: 2.7rem;
+				}
+			}
+		}
 	}
 }
 
@@ -26,11 +46,31 @@
 	html {
 		font-size: 0.91rem;
 	}
+
+	body {
+		.possibilities-container {
+			.possibilities-content {
+				.possibilities-item {
+					margin-right: 3.3rem;
+				}
+			}
+		}
+	}
 }
 
 @media screen and (min-width: 640px) {
 	html {
 		font-size: 1rem;
+	}
+
+	body {
+		.possibilities-container {
+			.possibilities-content {
+				.possibilities-item {
+					margin-right: 4rem;
+				}
+			}
+		}
 	}
 }
 
@@ -38,11 +78,31 @@
 	html {
 		font-size: 1.16rem;
 	}
+
+	body {
+		.possibilities-container {
+			.possibilities-content {
+				.possibilities-item {
+					margin-right: 3.7rem;
+				}
+			}
+		}
+	}
 }
 
 @media screen and (min-width: 810px) {
 	html {
 		font-size: 1.27rem;
+	}
+
+	body {
+		.possibilities-container {
+			.possibilities-content {
+				.possibilities-item {
+					margin-right: 4rem;
+				}
+			}
+		}
 	}
 }
 
@@ -134,6 +194,24 @@
 					margin-top: 4.5625rem;
 				}
 
+			}
+		}
+	}
+
+	body {
+		.possibilities-container {
+			.possibilities-content {
+				padding-left: 8.625rem;
+				padding-right: 18.8125rem;
+				margin-top: 14.git6875rem;
+
+				.possibilities-item {
+					margin: 0;
+
+					&:not(:first-child) {
+						@include flex;
+					}
+				}
 			}
 		}
 	}

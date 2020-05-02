@@ -16,7 +16,7 @@ $white-color: #fff;
 	box-sizing: border-box;
 }
 
-body, h1, h2, p, ul {
+body, h1, h2, h3, p, ul {
 	margin: 0;
 }
 
@@ -43,11 +43,11 @@ body {
 	@import './header-style/header.scss';
 
 	/* Product container */
-	@import './product-container-style/product-container.scss';
+	@import './product-container/product-container.scss';
 
 	/* Possibilities container */
 
-	@import './possibilities/possibilities-container.scss';
+	@import './possibilities-container/possibilities-container.scss';
 }
 
 /* Media */
