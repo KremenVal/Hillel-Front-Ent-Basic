@@ -1,0 +1,24 @@
+.basket-container {
+	cursor: pointer;
+	position: relative;
+
+	& img {
+		height: auto;
+		width: 2.5rem;
+	}
+
+	.count {
+		@include flex($align-items: center, $justify-content: center);
+		
+		background-color: $main-color;
+		border-radius: 100%;
+		color: $white-color;
+		font-family: 'Maven Pro', sans-serif;
+		font-size: 1.25rem;
+		height: 1.6875rem;
+		position: absolute;
+		right: -29%;
+		top: -15%;
+		width: 1.6875rem;
+	}
+}

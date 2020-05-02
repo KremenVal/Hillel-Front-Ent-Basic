@@ -1,0 +1,55 @@
+@import './mixin/flex-mixin.scss';
+$black-color: #000;
+$opacity-black-color: rgba(0, 0, 0, 0.1);
+$main-color: #6caae4;
+$white-color: #fff;
+
+%regular-weight {
+	font-weight: 400;
+}
+
+%hidden-content {
+	display: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body, h1, h2, p, ul {
+	margin: 0;
+}
+
+ul {
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+header {
+	@include flex($justify-content: center);
+}
+
+.container {
+	width: 100vw;
+}
+
+body {
+	/* Header container */
+	
+	@import './header-style/header.scss';
+
+	/* Product container */
+	@import './product-container-style/product-container.scss';
+
+	/* Possibilities container */
+
+	@import './possibilities/possibilities-container.scss';
+}
+
+/* Media */
+
+@import './media.scss/media.scss';
