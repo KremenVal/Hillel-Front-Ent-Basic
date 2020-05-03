@@ -40,7 +40,7 @@
 	}
 
 	.map {
-		background-image: url('../images/World.png');
+		background-image: url('../../images/World.png');
 		background-repeat: no-repeat;
 		background-size: cover;
 		height: 43.625rem;
@@ -88,7 +88,7 @@
 			}
 
 			&:nth-child(6) {
-				background-image: url('../images/Bg-top.png');
+				background-image: url('../../images/Bg-top.png');
 				background-size: contain;
 				padding: 1.2rem 1.625rem 1.8125rem 1.5rem;
 				margin-left: 9.875rem;
@@ -96,7 +96,7 @@
 			}
 
 			&:nth-child(7) {
-				background-image: url('../images/Bg-bottom.png');
+				background-image: url('../../images/Bg-bottom.png');
 				background-size: contain;
 				padding: 2.3rem 1.1875rem 0.9375rem 1.625rem;
 				margin-left: 52.1rem;

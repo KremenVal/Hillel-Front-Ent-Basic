@@ -1,4 +1,4 @@
-@import './mixin/flex-mixin.scss', './mixin/map-ball-mixin.scss';
+@import '../mixin/flex-mixin.scss', '../mixin/map-ball-mixin.scss';
 $black-color: #000;
 $opacity-black-color: rgba(0, 0, 0, 0.1);
 $main-color: #6caae4;
@@ -36,28 +36,32 @@ a {
 body {
 	/* Header container */
 	
-	@import './header-style/header.scss';
+	@import '../header-style/header.scss';
 
 	/* Product container */
-	@import './product-container/product-container.scss';
+	@import '../product-container/product-container.scss';
 
 	/* Possibilities container */
 
-	@import './possibilities-container/possibilities-container.scss';
+	@import '../possibilities-container/possibilities-container.scss';
 
 	/* Revolution container */
 
-	@import './revolution-container/revolution-container.scss';
+	@import '../revolution-container/revolution-container.scss';
 
 	/* Video container */
 
-	@import './video-container/video-container.scss';
+	@import '../video-container/video-container.scss';
 
 	/* Ingredients container */
 
-	@import './ingredients-container/ingredients-container.scss';
+	@import '../ingredients-container/ingredients-container.scss';
+
+	/* Order container */
+
+	@import '../order-container/order-container.scss';
 }
 
 /* Media */
 
-@import './media.scss/media.scss';
+@import '../media.scss/media.scss';
