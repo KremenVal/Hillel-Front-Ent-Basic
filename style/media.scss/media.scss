@@ -23,6 +23,14 @@
 				}
 			}
 		}
+
+		.video-container {
+			.video-content {
+				.video-button {
+					padding: 2.75rem 12.4rem;
+				}
+			}
+		}
 	}
 }
 
@@ -36,6 +44,14 @@
 			.possibilities-content {
 				.possibilities-item {
 					margin-right: 2.7rem;
+				}
+			}
+		}
+
+		.video-container {
+			.video-content {
+				.video-button {
+					padding: 2.75rem 11.5rem;
 				}
 			}
 		}
@@ -55,6 +71,14 @@
 				}
 			}
 		}
+
+		.video-container {
+			.video-content {
+				.video-button {
+					padding: 2.75rem 12rem;
+				}
+			}
+		}
 	}
 }
 
@@ -68,6 +92,14 @@
 			.possibilities-content {
 				.possibilities-item {
 					margin-right: 4rem;
+				}
+			}
+		}
+
+		.video-container {
+			.video-content {
+				.video-button {
+					padding: 2.75rem 12.8rem;
 				}
 			}
 		}
@@ -87,6 +119,14 @@
 				}
 			}
 		}
+
+		.video-container {
+			.video-content {
+				.video-button {
+					padding: 2.75rem 12.4rem;
+				}
+			}
+		}
 	}
 }
 
@@ -103,6 +143,14 @@
 				}
 			}
 		}
+
+		.video-container {
+			.video-content {
+				.video-button {
+					padding: 2.75rem 12.8rem;
+				}
+			}
+		}
 	}
 }
 
@@ -116,23 +164,25 @@
 	}
 
 	body {
-		.header {
-			box-shadow: unset;
-			padding: 4.375rem 0;
-
-			.hamburger-menu {
-				display: none;
-			}
-
-			.right-header-container {
-				.menu-container {
-					@include flex($align-items: center, $justify-content: center);
+		header {
+			.header {
+				box-shadow: unset;
+				padding: 4.375rem 0;
+	
+				.hamburger-menu {
+					display: none;
 				}
-
-				.header-button {
-					@include flex($align-items: center, $justify-content: center);		
+	
+				.right-header-container {
+					.menu-container {
+						@include flex($align-items: center, $justify-content: center);
+					}
+	
+					.header-button {
+						@include flex($align-items: center, $justify-content: center);		
+					}
 				}
-			}
+			}	
 		}
 
 		.product-container {
@@ -196,23 +246,65 @@
 
 			}
 		}
-	}
 
-	body {
 		.possibilities-container {
 			.possibilities-content {
-				padding-left: 8.625rem;
+				padding-left: 6.25rem;
 				padding-right: 18.8125rem;
-				margin-top: 14.git6875rem;
+				margin-top: 14.6875rem;
 
 				.possibilities-item {
 					margin: 0;
 
 					&:not(:first-child) {
-						@include flex;
+						@include flex($align-items: center, $justify-content: center);
 					}
 				}
 			}
+		}
+
+		.revolution-container {
+			@include flex($align-items: center, $flex-direction: column);
+		}
+
+		.video-container {
+			@include flex;
+
+			.video {
+				height: 59.5625rem;
+				padding-bottom: 5.0625rem;
+				padding-right: 5.875rem;
+				width: calc(100% / 2);
+			}
+
+			.video-content {
+				padding: 19rem 0 0 10.9375rem;
+				width: calc(100% / 2);
+
+				h3 {
+					font-size: 3.75rem;
+				}
+
+				p {
+					font-size: 2.25rem;
+					width: 55.3125rem;
+				}
+
+				.video-button {
+					font-size: 1.5rem;
+					padding: 2.75rem 8rem;
+					margin: 0;
+					margin-top: 4.5625rem;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1300px) {
+	body {
+		.revolution-container {
+			@include flex($align-items: center, $flex-direction: column);
 		}
 	}
 }

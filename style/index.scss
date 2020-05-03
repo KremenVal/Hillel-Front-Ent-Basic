@@ -1,4 +1,4 @@
-@import './mixin/flex-mixin.scss';
+@import './mixin/flex-mixin.scss', './mixin/map-ball-mixin.scss';
 $black-color: #000;
 $opacity-black-color: rgba(0, 0, 0, 0.1);
 $main-color: #6caae4;
@@ -29,10 +29,6 @@ a {
 	text-decoration: none;
 }
 
-header {
-	@include flex($justify-content: center);
-}
-
 .container {
 	width: 100vw;
 }
@@ -48,6 +44,14 @@ body {
 	/* Possibilities container */
 
 	@import './possibilities-container/possibilities-container.scss';
+
+	/* Revolution container */
+
+	@import './revolution-container/revolution-container.scss';
+
+	/* Video container */
+
+	@import './video-container/video-container.scss';
 }
 
 /* Media */
