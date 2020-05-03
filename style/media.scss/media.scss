@@ -55,6 +55,22 @@
 				}
 			}
 		}
+
+		.ingredients-container {
+			.ingredients-content {
+				.ingredients {
+					.ingredients-characteristics {
+						.first-part, .second-part {
+							.characteristic {
+								p {
+									font-size: 0.9rem;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -103,6 +119,34 @@
 				}
 			}
 		}
+
+		.ingredients-container {
+			.ingredients-content {
+				.ingredients {
+					.ingredients-characteristics {
+						.first-part, .second-part {
+							margin-left: 16.25rem;
+						}
+					}
+				}
+			}
+		}
+
+		.ingredients-container {
+			.ingredients-content {
+				.ingredients {
+					.ingredients-characteristics {
+						.first-part, .second-part {
+							.characteristic {
+								p {
+									font-size: 0.97rem;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -124,6 +168,22 @@
 			.video-content {
 				.video-button {
 					padding: 2.75rem 12.4rem;
+				}
+			}
+		}
+
+		.ingredients-container {
+			.ingredients-content {
+				.ingredients {
+					.ingredients-characteristics {
+						.first-part, .second-part {
+							.characteristic {
+								p {
+									font-size: 0.9rem;
+								}
+							}
+						}
+					}
 				}
 			}
 		}
@@ -295,6 +355,87 @@
 					padding: 2.75rem 8rem;
 					margin: 0;
 					margin-top: 4.5625rem;
+				}
+			}
+		}
+
+		.ingredients-container {
+			.ingredients-content {
+				@include flex($align-items: center, $flex-direction: column);
+
+				padding-bottom: 18.5rem;
+
+				& > h3 {
+					font-size: 3.75rem;
+					margin-top: 9.625rem;
+				}
+
+				& > span {
+					font-size: 1.9375rem;
+				}
+
+				.ingredients {
+					@include flex($justify-content: center);
+					margin-top: 5.625rem;
+
+					& > img {
+						margin-left: 0.78125rem;
+						width: 36.125rem;
+					}
+
+					.ingredients-characteristics {
+						@include flex($flex-direction: row-reverse, $justify-content: space-around);
+
+						margin-top: 11.125rem;
+
+						.first-part, .second-part {
+							margin-left: 28rem;
+
+							.characteristic {
+								font-size: 2.4375rem;
+								width: 32.625rem;
+
+								.title {
+									margin-bottom: 2.625rem;
+		
+									.border {
+										border-radius: 0.75rem;
+										height: 4.375rem;
+										width: 0.875rem;
+									}
+								}
+
+								p {
+									font-size: 1.8rem;
+								}
+
+								&:nth-child(even) {
+									margin-top: 8.5rem;
+								}
+							}
+						}
+
+						.second-part {
+							margin-left: 0;
+							margin-right: 28rem;
+
+							.characteristic {
+								@include flex($align-items: flex-end, $flex-direction: column);
+
+								.title {
+									@include flex($flex-direction: row-reverse);
+								}
+
+								p {
+									text-align: right;
+								}
+							}
+
+							.hidden-characteristic {
+								@include flex($align-items: flex-end, $flex-direction: column);
+							}
+						}
+					}
 				}
 			}
 		}
