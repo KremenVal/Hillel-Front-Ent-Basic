@@ -14,63 +14,11 @@
 	html {
 		font-size: 0.57rem;
 	}
-
-	body {
-		.possibilities-container {
-			.possibilities-content {
-				.possibilities-item {
-					margin-right: 4.3rem;
-				}
-			}
-		}
-
-		.video-container {
-			.video-content {
-				.video-button {
-					padding: 2.75rem 12.4rem;
-				}
-			}
-		}
-	}
 }
 
-@media screen and (min-width: 410px) {
+@media screen and (min-width: 420px) {
 	html {
 		font-size: 0.68rem;
-	}
-
-	body {
-		.possibilities-container {
-			.possibilities-content {
-				.possibilities-item {
-					margin-right: 2.7rem;
-				}
-			}
-		}
-
-		.video-container {
-			.video-content {
-				.video-button {
-					padding: 2.75rem 11.5rem;
-				}
-			}
-		}
-
-		.ingredients-container {
-			.ingredients-content {
-				.ingredients {
-					.ingredients-characteristics {
-						.first-part, .second-part {
-							.characteristic {
-								p {
-									font-size: 0.9rem;
-								}
-							}
-						}
-					}
-				}
-			}
-		}
 	}
 }
 
@@ -78,75 +26,11 @@
 	html {
 		font-size: 0.91rem;
 	}
-
-	body {
-		.possibilities-container {
-			.possibilities-content {
-				.possibilities-item {
-					margin-right: 3.3rem;
-				}
-			}
-		}
-
-		.video-container {
-			.video-content {
-				.video-button {
-					padding: 2.75rem 12rem;
-				}
-			}
-		}
-	}
 }
 
 @media screen and (min-width: 640px) {
 	html {
 		font-size: 1rem;
-	}
-
-	body {
-		.possibilities-container {
-			.possibilities-content {
-				.possibilities-item {
-					margin-right: 4rem;
-				}
-			}
-		}
-
-		.video-container {
-			.video-content {
-				.video-button {
-					padding: 2.75rem 12.8rem;
-				}
-			}
-		}
-
-		.ingredients-container {
-			.ingredients-content {
-				.ingredients {
-					.ingredients-characteristics {
-						.first-part, .second-part {
-							margin-left: 16.25rem;
-						}
-					}
-				}
-			}
-		}
-
-		.ingredients-container {
-			.ingredients-content {
-				.ingredients {
-					.ingredients-characteristics {
-						.first-part, .second-part {
-							.characteristic {
-								p {
-									font-size: 0.97rem;
-								}
-							}
-						}
-					}
-				}
-			}
-		}
 	}
 }
 
@@ -154,63 +38,11 @@
 	html {
 		font-size: 1.16rem;
 	}
-
-	body {
-		.possibilities-container {
-			.possibilities-content {
-				.possibilities-item {
-					margin-right: 3.7rem;
-				}
-			}
-		}
-
-		.video-container {
-			.video-content {
-				.video-button {
-					padding: 2.75rem 12.4rem;
-				}
-			}
-		}
-
-		.ingredients-container {
-			.ingredients-content {
-				.ingredients {
-					.ingredients-characteristics {
-						.first-part, .second-part {
-							.characteristic {
-								p {
-									font-size: 0.9rem;
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
 }
 
 @media screen and (min-width: 810px) {
 	html {
 		font-size: 1.27rem;
-	}
-
-	body {
-		.possibilities-container {
-			.possibilities-content {
-				.possibilities-item {
-					margin-right: 4rem;
-				}
-			}
-		}
-
-		.video-container {
-			.video-content {
-				.video-button {
-					padding: 2.75rem 12.8rem;
-				}
-			}
-		}
 	}
 }
 
@@ -345,16 +177,16 @@
 					font-size: 3.75rem;
 				}
 
-				p {
+				span {
 					font-size: 2.25rem;
 					width: 55.3125rem;
 				}
 
 				.video-button {
 					font-size: 1.5rem;
-					padding: 2.75rem 8rem;
 					margin: 0;
 					margin-top: 4.5625rem;
+					width: 26.375rem;
 				}
 			}
 		}
@@ -407,6 +239,7 @@
 
 								p {
 									font-size: 1.8rem;
+									width: auto;
 								}
 
 								&:nth-child(even) {
@@ -439,13 +272,80 @@
 				}
 			}
 		}
+
+		.order-container {
+			.order-content {
+				@include flex($align-items: flex-end, $justify-content: space-between);
+
+				padding-bottom: 10.625rem;
+				padding-top: 13.875rem;
+
+				.click {
+					@include flex;
+				}
+
+				.payment {
+
+					.form-title {
+						font-size: 3.125rem;
+						
+						.location {
+							height: 5rem;
+							width: 5rem;
+						}
+					}
+
+					.form-payment {
+						margin-top: 3.6875rem;
+
+						label {
+							p {
+								font-size: 1.9375rem;
+							}
+
+							input, select {
+								font-size: 1.9375rem;
+								width: 58rem;
+							}
+						}
+
+						.town-info {
+							input {
+								width: 16rem;
+							}
+						}
+
+						.town-info {
+							input {
+								width: 27.7rem;
+							}
+		
+							& label:last-child {
+								margin-left: 2.75rem;
+							}
+						}
+
+						button {
+							font-size: 1.75rem;
+							padding: 2.625rem 22.3rem;
+						}
+					}
+				}
+
+				.flower {
+					@include flex;
+				}
+			}
+		}
 	}
 }
 
 @media screen and (min-width: 1300px) {
 	body {
 		.revolution-container {
-			@include flex($align-items: center, $flex-direction: column);
+			.map {
+				width: 84.5rem;
+			}
 		}
 	}
 }

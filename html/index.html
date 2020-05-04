@@ -151,21 +151,21 @@
 				<h3>
 					JOIN THE SKIN REVOLUTION
 				</h3>
-				<p class="worldwide">
+				<span class="worldwide">
 					Delivery worldwide and happy customers in all parts of the world.
-				</p>
-				<p>
+				</span>
+				<span>
 					We can proudly say that our customers love us. Pureskin have made over 700+ customers happy.
-				</p>
-				<p>
+				</span>
+				<span>
 					We continue to grow which make os able to give you the best service and products.
-				</p>
-				<p class="info">
+				</span>
+				<span class="info">
 					If you have questions regarding our service 
 					<a href="#">
 						info@pureskin.com
 					</a>
-				</p>
+				</span>
 			</div>
 		</div>
 		<div class="map">
@@ -194,9 +194,12 @@
 			<h3>
 				SEE HOW IT WORKS
 			</h3>
-			<p>
-				Watch our presentation video on how to use everyday.  Melanie will demonstrate on how to apply on your skin.
-			</p>
+			<span>
+				Watch our presentation video on how to use everyday.
+			</span>
+			<span>
+				Melanie will demonstrate on how to apply on your skin.
+			</span>
 			<a href="#" class="video-button">
 				WATCH VIDEO
 			</a>
@@ -282,8 +285,50 @@
 						ORDER NOW AND GET PURE SKIN
 					</span>
 				</div>
-				<form action="/" method="POST">
-					
+				<form action="/" method="POST" class="form-payment">
+					<label for="country">
+						<p>Country</p>
+						<div class="wrap">
+							<select name="contry" id="country">
+								<option value="us" cheked>
+									United States (US)
+								</option>
+								<option value="ua">
+									Ukariane (UA)
+								</option>
+							</select>
+						</div>
+					</label>
+					<label for="state">
+						<p>State</p>
+						<div class="wrap">
+							<select name="state" id="state">
+								<option value="California" checked>
+									California
+								</option>
+								<option value="Florida">
+									Florida
+								</option>
+							</select>
+						</div>
+					</label>
+					<label for="address">
+						<p>Address:</p>
+						<input type="text" name="address" id="address" maxlength="30" minlength="3" placeholder="Enter home address" required>
+					</label>
+					<div class="town-info">
+						<label for="town">
+							<p>Town/City:</p>
+							<input type="text" name="town" id="town" maxlength="30" minlength="3" placeholder="Ex. San Francisco" required>
+						</label>
+						<label for="zip-code">
+							<p>Post/ZIP Code:</p>
+							<input type="text" name="zip-code" id="zip-code" maxlength="5" minlength="5" placeholder="_ _ - _ _ _" required>
+						</label>
+					</div>
+					<button>
+						GO TO PAYMENT
+					</button>
 				</form>
 			</div>
 			<div class="flower">

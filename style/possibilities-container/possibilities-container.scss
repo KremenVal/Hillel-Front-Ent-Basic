@@ -10,10 +10,10 @@
 		margin-top: 3.4375rem;
 
 		.possibilities-item {
-			@include flex($align-items: center, $justify-content: center);
+			@include flex($align-items: center);
 
 			margin: 0 auto;
-			margin-right: 3.6rem;
+			width: 90%;
 
 			&:not(:first-child) {
 				display: none;

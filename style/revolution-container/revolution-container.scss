@@ -7,6 +7,7 @@
 		padding: 24.6875rem 0;
 
 		.skin-content {
+			@include flex($flex-direction: column);
 			margin-left: 6.25rem;
 			width: 50.3rem;
 		
@@ -17,15 +18,15 @@
 				font-weight: 400;
 			}
 
-			.worldwide {
-				font-size: 1.73rem;
+			& > .worldwide {
+				font-size: 1.7rem;
 				font-weight: 600;
 			}
 
-			& p {
+			& > span {
 				color: #8C8F94;
 				font-family: "Lato", sans-serif;
-				font-size: 2.13rem;
+				font-size: 2.12rem;
 				margin-top: 3.625rem;
 			}
 
@@ -47,7 +48,7 @@
 		position: absolute;
 		margin-top: 22.5625rem;
 		right: 0;
-		width: 79.5rem;
+		width: 72.5rem;
 
 		.map-ball {
 			border-radius: 100%;

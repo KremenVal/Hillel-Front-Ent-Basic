@@ -43,7 +43,7 @@
 				width: auto;
 
 				.first-part, .second-part {
-					margin-left: 15.25rem;
+					margin-left: 16.25rem;
 					
 					.characteristic {
 						@include flex($flex-direction: column);
@@ -73,7 +73,8 @@
 	
 						p {
 							color: #5b5f64;
-							font-size: 0.97rem;
+							font-size: 0.9rem;
+							width: 18.625rem;
 						}
 
 						&:nth-child(even) {
