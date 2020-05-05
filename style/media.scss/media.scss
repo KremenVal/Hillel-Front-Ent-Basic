@@ -132,8 +132,14 @@
 				}
 
 				.button-container {
-					margin-left: 0;
+					margin: 0;
 					margin-top: 4.5625rem;
+					width: auto;
+
+					.product-button {
+						padding: 2.125rem 8.7rem;
+						width: auto;
+					}
 				}
 
 			}
@@ -142,7 +148,7 @@
 		.possibilities-container {
 			.possibilities-content {
 				padding-left: 6.25rem;
-				padding-right: 18.8125rem;
+				padding-right: 14.8125rem;
 				margin-top: 14.6875rem;
 
 				.possibilities-item {
@@ -337,6 +343,53 @@
 				}
 			}
 		}
+
+		.news-container {
+			@include flex($justify-content: center);
+			.news-content {
+				padding: 10.25rem 0;
+		
+				& > img {
+					display: block;
+					left: 0;
+					margin-top: 6.5rem;
+				}
+
+				& > img:nth-child(2) {
+					bottom: -4.7rem;
+					left: 15rem;
+					margin: 0;
+				}
+		
+				.news {
+					@include flex($align-items: center, $flex-direction: column);
+		
+					h3 {
+						font-size: 3.125rem;
+						margin-bottom: 5.625rem;
+					}
+		
+					label {
+						width: 64.375rem;
+					}
+
+					.subscribe-container {
+						border: 0.1rem solid #dbd7d7;
+						padding: 0.625rem 0.75rem 0.625rem 3.125rem;
+						margin-bottom: 4.25rem;
+		
+						input[type="text"] {
+							font-size: 1.8125rem;
+						}
+		
+						input[type="button"] {
+							padding: 1.875rem 3rem;
+						}
+					}
+				}
+			}
+		}
+		
 	}
 }
 
@@ -358,6 +411,14 @@
 
 	.container {
 		width: 1500px;
+	}
+
+	body {
+		.possibilities-container {
+			.possibilities-content {
+				padding-right: 10.8125rem;
+			}
+		}
 	}
 }
 
