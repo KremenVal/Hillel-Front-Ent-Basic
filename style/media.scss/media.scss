@@ -38,11 +38,35 @@
 	html {
 		font-size: 1.16rem;
 	}
+
+	body {
+		.pre-footer-container {
+			.pre-footer-content {
+				.share-container {
+					& > span {
+						width: 32.875rem;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media screen and (min-width: 810px) {
 	html {
 		font-size: 1.27rem;
+	}
+
+	body {
+		.pre-footer-container {
+			.pre-footer-content {
+				.share-container {
+					& > span {
+						width: 29.875rem;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -390,6 +414,43 @@
 			}
 		}
 		
+		.pre-footer-container {
+			.pre-footer-content {
+				@include flex($align-items: center, $flex-direction: row, $justify-content: space-between);
+
+				padding: 13rem 0 9.375rem;
+
+				.share-container {
+					.pre-logo-container {
+						margin-bottom: 5.25rem;
+					}
+
+					& > span {
+						margin-bottom: 6rem;
+					}
+				}
+
+				.pre-footer-nav {
+					width: auto;
+
+					.nav-item {
+						&:first-child {
+							margin-bottom: 0;
+							margin-right: 12.375rem;
+						}
+
+						&:last-child {
+							margin-left: 8.625rem;
+							margin-right: 14.625rem;
+						}
+
+						h3 {
+							margin-bottom: 3.125rem;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
