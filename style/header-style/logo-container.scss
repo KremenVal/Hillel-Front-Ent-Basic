@@ -14,7 +14,7 @@
 		font-weight: 600;
 	}
 
-	& span > span {
+	& span:nth-child(3) {
 		@extend %regular-weight;
 	}
 }

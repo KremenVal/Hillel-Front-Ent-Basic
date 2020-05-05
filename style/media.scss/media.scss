@@ -428,6 +428,10 @@
 					& > span {
 						margin-bottom: 6rem;
 					}
+
+					.share-buttons {
+						margin-bottom: 0;
+					}
 				}
 
 				.pre-footer-nav {
@@ -449,6 +453,12 @@
 						}
 					}
 				}
+			}
+		}
+
+		footer {
+			.footer-container {
+				padding: 0;
 			}
 		}
 	}
