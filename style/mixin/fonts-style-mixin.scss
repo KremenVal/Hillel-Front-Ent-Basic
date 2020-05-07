@@ -1,0 +1,6 @@
+@mixin font($color: $black-color, $font-family: 'Maven Pro', $font-size: 1rem, $font-weight: 600) {
+    color: $color;
+    font-family: $font-family, sans-serif;
+    font-size: $font-size;
+    font-weight: $font-weight;
+}

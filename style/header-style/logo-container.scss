@@ -2,19 +2,16 @@
 	@include flex($align-items: center);
 
 	& img {
-		height: auto;
+		@include sizes($width: 3.5625rem);
+
 		margin-right: 2.6875rem;
-		width: 3.5625rem;
 	}
 
 	& span {
-		color: $black-color;
-		font-family: 'Maven Pro', sans-serif;
-		font-size: 2rem;
-		font-weight: 600;
+		@include font($color: $black-color, $font-size: 2rem);
 	}
 
 	& span:nth-child(3) {
-		@extend %regular-weight;
+		font-weight: 400;
 	}
 }

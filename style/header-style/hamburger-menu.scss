@@ -1,9 +1,10 @@
 .hamburger-menu {
-	display: flex;
+	@include flex;
+
 	position: relative;
 
 	#menu {
-		@extend %hidden-content;
+		display: none;
 
 		&:checked ~ .menu-button > span:nth-child(-n + 2) {
 			margin-top: 0.75rem;
@@ -23,18 +24,17 @@
 	
 	.menu-button {
 		@include flex($align-items: center, $flex-direction: column);
+		@include sizes($height: 1.75rem, $width: 2.25rem);
 
 		cursor: pointer;
-		height: 1.75rem;
-		width: 2.25rem;
 		z-index: 1;
 
 		& span {
-			background-color: #2d2d2f;
+			@include sizes($height: 0.25rem, $width: 100%);
+
+			background-color: $black-color-2;
 			border-radius: 2px;
-			height: 0.25rem;
 			position: absolute;
-			width: 100%;
 		}
 
 		& span:nth-child(2) {
@@ -52,26 +52,24 @@
 	
 	.menu-box {
 		@include flex($align-items: flex-start, $flex-direction: column);
+		@include position($left: -100%, $position: fixed);
 
 		background-color: $white-color;
 		box-shadow: 0.125rem 0.125rem 0.25rem $opacity-black-color;
 		height: 100%;
-		left: -100%;
 		margin-top: 4.8rem;
-		position: fixed;
 		transition-duration: 0.5s;
 
 		.menu-item {
+			@include font($font-size: 1.625rem);
+
 			border-bottom: 0.125rem solid $opacity-black-color;
-			color: $black-color;
-			font-family: 'Maven Pro', sans-serif;
-			font-size: 1.625rem;
 			padding: 1rem 2.1875rem;
 			transition-duration: 0.5s;
 			width: 100%;
 			
 			&:first-child {
-				border-top: 0.25rem solid #e6e6e6;
+				border-top: 0.25rem solid $white-color-2;
 			}
 
 			&:hover {

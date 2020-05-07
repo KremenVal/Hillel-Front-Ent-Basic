@@ -1,6 +1,6 @@
 .revolution-container {
 	display: none;
-	background-color: #f5f5f5;
+	background-color: $white-color-3;
 	margin-top: -6.5rem;
 
 	.skin-container {
@@ -8,25 +8,21 @@
 
 		.skin-content {
 			@include flex($flex-direction: column);
+
 			margin-left: 6.25rem;
 			width: 50.3rem;
 		
 			& h3 {
-				color: #26272D;
-				font-family: 'Maven Pro', sans-serif;
-				font-size: 3.75rem;
-				font-weight: 400;
+				@include font($color: $black-color-3, $font-size: 3.75rem, $font-weight: 400);
 			}
 
 			& > .worldwide {
-				font-size: 1.7rem;
-				font-weight: 600;
+				@include font($color: $grey-color-3, $font-family: "Lato", $font-size: 1.7rem, $font-weight: 600);
 			}
 
 			& > span {
-				color: #8C8F94;
-				font-family: "Lato", sans-serif;
-				font-size: 2.12rem;
+				@include font($color: $grey-color-3, $font-family: "Lato", $font-size: 2.12rem, $font-weight: 400);
+
 				margin-top: 3.625rem;
 			}
 
@@ -41,19 +37,18 @@
 	}
 
 	.map {
-		background-image: url('../../images/World.png');
+		@include position($position: absolute, $right: 0);
+		@include sizes($height: 43.625rem, $width: 78.5rem);
+
+		background: url('../../images/World.png');
 		background-repeat: no-repeat;
 		background-size: cover;
-		height: 43.625rem;
-		position: absolute;
 		margin-top: 22.5625rem;
-		right: 0;
-		width: 72.5rem;
 
 		.map-ball {
 			border-radius: 100%;
-			box-shadow: 0 0 1.875rem rgba(0, 0, 0, 0.3);
-			background-color: #cfcfcf;
+			box-shadow: 0 0 1.875rem $opacity-black-color-3;
+			background-color: $white-color-4;
 			position: absolute;
 
 			&:nth-child(1) {
@@ -78,14 +73,12 @@
 		}
 
 		.map-text {
-			height: 7.2rem;
+			@include sizes($height: 7.2rem, $width: 20.3rem);
+
 			position: absolute;
-			width: 20.3rem;
 
 			& span {
-				color: #444;
-				font-family: "Lato", sans-serif;
-				font-size: 1.4rem;
+				@include font($color: $grey-color-4, $font-family: "Lato", $font-size: 1.4rem, $font-weight: 400);
 			}
 
 			&:nth-child(6) {

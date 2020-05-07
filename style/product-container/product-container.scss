@@ -10,34 +10,29 @@
 	.product-description {
 		@include flex($flex-direction: column, $justify-content: flex-start);
 	
-		padding: 0 2.1875rem 0 2.4375rem;
+		padding: 0 2.4375rem 0 2.4375rem;
 		position: relative;
 
 		& > span:first-child {
-			@extend %hidden-content;
+			@include font($color: $black-color, $font-size: 3.5rem, $font-family: 'Lato');
 
-			color: $black-color;
-			font-size: 3.5rem;
-			font-family: 'Lato', sans-serif;
-			font-weight: bold;
+			display: none;
 			margin-top: 11.25rem;
 
 			& > span {
-				@extend %regular-weight;
+				font-weight: 400;
 			}
 		}
 
 		& h1 {
-			font-family: 'Maven Pro', sans-serif;
-			font-size: 8.1vw;
-			font-weight: 500;
+			@include font($font-size: 8.1vw, $font-weight: 500);
+
 			margin-top: 2.5rem;
 		}
 
 		.nutrion {
-			font-family: 'Lato', sans-serif;
-			font-size: 4.2vw;
-			font-weight: 400;
+			@include font($font-family: 'Lato', $font-size: 4.2vw, $font-weight: 400);
+
 			margin-top: 1.125rem;
 		}
 
@@ -56,24 +51,22 @@
 				@include flex;
 
 				& img {
-					height: auto;
-					width: 2.1875rem;
+					@include sizes($width: 2.1875rem);
 				}
 
 				& span {
-					font-family: 'Maven Pro', sans-serif;
-					font-size: 1.3125rem;
-					font-weight: 400;
+					@include font($font-size: 1.3125rem, $font-weight: 400);
+
 					margin-left: 1.875rem;
 				}
 			}
 		}
 
 		.product-image {
-			height: auto;
+			@include sizes($width: 30rem);
+
 			margin-left: 4.875rem;
 			margin-top: 3.5625rem;
-			width: 30rem;
 		}
 
 		.button-container {
@@ -85,27 +78,24 @@
 
 			.product-button {
 				@include flex($justify-content: center);
+				@include font($color: $white-color, $font-size: 2rem);
 	
 				background-color: $main-color;
 				border-radius: 0.25rem;
-				color: $white-color;
-				font-family: 'Maven Pro', sans-serif;
-				font-size: 2rem;
 				padding: 2.125rem;
 				width: 95%;
 				transition-duration: 0.5s;
 	
 				&:hover {
 					color: $main-color;
-					background-color: #f5f5f5;
+					background-color: $white-color-3;
 					box-shadow: 0 0 0.625rem $opacity-black-color;
 				}
 			}
 
 			& span {
-				font-family: 'Maven Pro', sans-serif;
-				font-size: 1.25rem;
-				font-weight: 500;
+				@include font($font-size: 1.25rem, $font-weight: 500);
+
 				margin-top: 1.125rem;
 			}
 		}

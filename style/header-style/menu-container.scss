@@ -1,12 +1,10 @@
 .menu-container {
-	@extend %hidden-content;
+	display: none;
 
 	.normal-menu {
+		@include font($color: $black-color, $font-size: 1.625rem);
+
 		border-radius: 0.25rem;
-		color: $black-color;
-		font-family: 'Maven Pro', sans-serif;
-		font-size: 1.625rem;
-		font-weight: bold;
 		padding: 1.094rem 2.25rem;
 		transition-duration: 0.5s;
 

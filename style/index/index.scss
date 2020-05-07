@@ -1,16 +1,5 @@
-@import '../mixin/flex-mixin.scss', '../mixin/map-ball-mixin.scss';
-$black-color: #000;
-$opacity-black-color: rgba(0, 0, 0, 0.1);
-$main-color: #6caae4;
-$white-color: #fff;
-
-%regular-weight {
-	font-weight: 400;
-}
-
-%hidden-content {
-	display: none;
-}
+@import '../mixin/flex-mixin.scss', '../mixin/map-ball-mixin.scss', '../mixin/fonts-style-mixin.scss', '../mixin/sizes-style-mixin.scss', '../mixin/position-style-mixon.scss';
+@import '../colors/colors.scss';
 
 * {
 	box-sizing: border-box;
@@ -39,6 +28,7 @@ body {
 	@import '../header-style/header.scss';
 
 	/* Product container */
+
 	@import '../product-container/product-container.scss';
 
 	/* Possibilities container */

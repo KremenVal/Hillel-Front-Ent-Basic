@@ -36,7 +36,7 @@
 
 @media screen and (min-width: 720px) {
 	html {
-		font-size: 1.16rem;
+		font-size: 1rem;
 	}
 
 	body {
@@ -53,10 +53,6 @@
 }
 
 @media screen and (min-width: 810px) {
-	html {
-		font-size: 1.27rem;
-	}
-
 	body {
 		.pre-footer-container {
 			.pre-footer-content {
@@ -80,6 +76,8 @@
 	}
 
 	body {
+		padding: 0;
+		
 		header {
 			.header {
 				box-shadow: unset;
@@ -468,7 +466,7 @@
 	body {
 		.revolution-container {
 			.map {
-				width: 84.5rem;
+				width: 79.1rem;
 			}
 		}
 	}

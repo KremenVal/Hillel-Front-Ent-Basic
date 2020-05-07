@@ -1,19 +1,18 @@
 .header-button {
-	@extend %hidden-content;
+	display: none;
 	margin-left: 4.4375rem;
 
 	a {
-		color: $white-color;
+		@include font($color: $white-color, $font-size: 1.5rem);
+
 		background-color: $main-color;
 		border-radius: 0.25rem;
-		font-family: 'Maven Pro', sans-serif;
-		font-size: 1.5rem;
 		padding: 1.16rem 5.066rem;
 		transition: all 0.5s;
 
 		&:hover {
 			color: $main-color;
-			background-color: #f5f5f5;
+			background-color: $white-color-3;
 			box-shadow: 0 0 0.625rem $opacity-black-color;
 		}
 	}
