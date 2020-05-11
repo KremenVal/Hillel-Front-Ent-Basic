@@ -1,0 +1,30 @@
+.gender {
+	@include flex;
+}
+
+.gender input[type=radio] {
+	display: none;
+}
+
+.gender label {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	padding-left: 15px;
+	margin-right: 0;
+}
+
+.gender label:before {
+	content: "";
+	background: url('../../images/radio-out.png') 0 0 no-repeat;
+	display: inline-block;
+	height: 10px;
+	position: absolute;
+	left: 0;
+	top: 28%;
+	width: 10px;
+}
+ 
+.gender input[type=radio]:checked + label:before {
+	background: url('../../images/radio-inside.png') 0 0 no-repeat;
+}

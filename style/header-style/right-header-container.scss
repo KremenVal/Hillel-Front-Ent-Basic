@@ -1,7 +1,0 @@
-.right-header-container {
-	@include flex($align-items: center, $justify-content: center);
-
-	@import './menu-container.scss';
-	@import './basket-container.scss';
-	@import './header-button.scss';
-}

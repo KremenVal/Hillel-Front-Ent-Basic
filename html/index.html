@@ -1,444 +1,50 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Nutrition for your skin with a beneficial influence">
-	<link rel="stylesheet" href="../style/index/index.css">
-	<link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap">
-	<title>PURESKIN</title>
+	<title>Form</title>
+	<link rel="stylesheet" href="../style/index-style/index.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
 </head>
 <body>
-	<header>
-		<div class="header container">
-			<div class="hamburger-menu">
-				<input id="menu" type="checkbox">
-				<label class="menu-button" for="menu">
-					<span></span>
-					<span></span>
-					<span></span>
-				</label>
-				<div class="menu-box">
-					<a class="menu-item" href="#">
-						Ingredients
-					</a>
-					<a class="menu-item" href="#">
-						About Us
-					</a>
-					<a class="menu-item" href="#">
-						My account
-					</a>
-				</div>
+	<main>
+		<form action="/" method="POST">
+			<label for="first-name">
+				<p>First name:</p>
+				<input type="text" name="first-name" id="first-name" minlength="3" maxlength="30" placeholder="Ivan" required>
+			</label>
+			<label for="last-name">
+				<p>Last name:</p>
+				<input type="text" name="last-name" id="last-name" minlength="3" maxlength="30" placeholder="Ivanov">
+			</label>
+			<label for="email">
+				<p>E-mail:</p>
+				<input type="email" name="email" id="email" minlength="6" maxlength="30" placeholder="example@gmail.com" required>
+			</label>
+			<label for="city">
+				<p>City/Town:</p>
+				<select name="city" id="city" required>
+					<option value="Kyiv" selected>Kyiv</option>
+					<option value="Dnepr">Dnepr</option>
+					<option value="Lviv">Lviv</option>
+					<option value="Kharkiv">Kharkiv</option>
+					<option value="Odessa">Odessa</option>
+				</select>
+			</label>
+			<div class="gender">
+				<span>Gender:</span>
+				<input type="radio" name="gender" id="male" value="Male" checked>
+				<label for="male"><span>Male</span></label>
+				<input type="radio" name="gender" id="female" value="Female">
+				<label for="female"><span>Female</span></label>
 			</div>
-			<div class="logo-container">
-				<img src="../images/logo.png" alt="Logo">
-				<span>
-					PURE
-				</span>
-				<span>
-					SKIN
-				</span>
+			<div class="remember-me">
+				<input type="checkbox" name="remember-me" id="checkbox">
+				<label for="checkbox"><span>Remember me</span></label>
 			</div>
-			<div class="right-header-container">
-				<div class="menu-container">
-					<a class="normal-menu" href="#">
-						Ingredients
-					</a>
-					<a class="normal-menu" href="#">
-						About Us
-					</a>
-					<a class="normal-menu" href="#">
-						My account
-					</a>
-				</div>
-				<div class="basket-container">
-					<img src="../images/basket.png" alt="Basket">
-					<div class="count">
-						<span>
-							2
-						</span>
-					</div>
-				</div>
-				<div class="header-button">
-					<a href="#">
-						Any questions?
-					</a>
-				</div>
-			</div>
-		</div>
-	</header>
-	<section class="product-container">
-		<div class="product-description container">
-			<span>
-				730
-				<span>
-					 satisfied customers today
-				</span>
-			</span>
-			<h1>PERFECTLY PURE SKIN</h1>
-			<span class="nutrion">Nutrition for your skin with a beneficial influence</span>
-			<div class="positive-properties">
-				<div class="properties">
-					<img src="../images/check.png" alt="Positive property">
-					<span>
-						Cleaner face within few days
-					</span>
-				</div>
-				<div class="properties">
-					<img src="../images/check.png" alt="Positive property">
-					<span>
-						Easy to apply on skin
-					</span>
-				</div>
-				<div class="properties">
-					<img src="../images/check.png" alt="Positive property">
-					<span>
-						Delivery between 1-3 days
-					</span>
-				</div>
-			</div>
-			<img class="product-image" src="../images/cosmetic-cream-tube.png" alt="Cosmetic cream tube">
-			<div class="button-container">
-				<a href="#" class="product-button">
-					BUY NOW 19.99$
-				</a>
-				<span>
-					Includes 12 skin treatments
-				</span>
-			</div>
-		</div>
-	</section>
-	<section class="possibilities-container">
-		<div class="possibilities-content container">
-			<div class="possibilities-item">
-				<img src="../images/shipping_icon.png" alt="Shipping">
-				<div class="possibilities-text">
-					<h3>
-						FREE WORLWIDE SHIPPING
-					</h3>
-					<span>
-						Free shipping for all orders
-					</span>
-				</div>
-			</div>
-			<div class="possibilities-item">
-				<img src="../images/moneyback_icon.png" alt="Money back">
-				<div class="possibilities-text">
-					<h3>
-						MONEY BACK GUARANTEE
-					</h3>
-					<span>
-						We return money within 30 days
-					</span>
-				</div>
-			</div>
-			<div class="possibilities-item">
-				<img src="../images/secure_icon.png" alt="Secure">
-				<div class="possibilities-text">
-					<h3>
-						SECURE ONLINE PAYMENT
-					</h3>
-					<span>
-						We posess SSL / Secure Certificate
-					</span>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="revolution-container">
-		<div class="skin-container container">
-			<div class="skin-content">
-				<h3>
-					JOIN THE SKIN REVOLUTION
-				</h3>
-				<span class="worldwide">
-					Delivery worldwide and happy customers in all parts of the world.
-				</span>
-				<span>
-					We can proudly say that our customers love us. Pureskin have made over 700+ customers happy.
-				</span>
-				<span>
-					We continue to grow which make os able to give you the best service and products.
-				</span>
-				<span class="info">
-					If you have questions regarding our service 
-					<a href="#">
-						info@pureskin.com
-					</a>
-				</span>
-			</div>
-		</div>
-		<div class="map">
-			<div class="map-ball"></div>
-			<div class="map-ball"></div>
-			<div class="map-ball"></div>
-			<div class="map-ball"></div>
-			<div class="map-ball"></div>
-			<div class="map-text">
-				<span>
-					Love it, easy to use and clean face in a few days.
-				</span>
-			</div>
-			<div class="map-text">
-				<span>
-					I got more confident as days past, i can now say i love it.
-				</span>
-			</div>
-		</div>
-	</section>
-	<section class="video-container">
-		<div class="video">
-			<a href="#"><img src="../images/play-btn-icon.png" alt="Play button"></a>
-		</div>
-		<div class="video-content">
-			<h3>
-				SEE HOW IT WORKS
-			</h3>
-			<span>
-				Watch our presentation video on how to use everyday.
-			</span>
-			<span>
-				Melanie will demonstrate on how to apply on your skin.
-			</span>
-			<a href="#" class="video-button">
-				WATCH VIDEO
-			</a>
-		</div>
-	</section>
-	<section class="ingredients-container">
-		<div class="ingredients-content container">
-			<h3>
-				PURE SKIN WITH NATURAL INGREDIENTS
-			</h3>
-			<span>
-				We only use the best natural ingredients possible.
-			</span>
-			<div class="ingredients">
-				<img src="../images/cosmetic-cream-tube-mockup-single.png" alt="Cosmetic cream tube">
-				<div class="ingredients-characteristics container">
-					<div class="first-part">
-						<div class="characteristic">
-							<div class="title">
-								<span class="border"></span>
-								<span>
-									ANTI-AGING
-								</span>
-							</div>
-							<p>
-								Lorem ipsum dolor sit amet, consec tetuer adipiscing elit, sed diam nonu
-							</p>
-						</div>
-						<div class="characteristic">
-							<div class="title">
-								<span class="border"></span>
-								<span>
-									ORGANIC
-								</span>
-							</div>
-							<p>
-								Lorem ipsum dolor sit amet, consec tetuer adipiscing elit, sed diam nonu
-							</p>
-						</div>
-					</div>
-					<div class="second-part">
-						<div class="characteristic hidden-characteristic">
-							<div class="title">
-								<span class="border"></span>
-								<span>
-									SMOOTHER SKIN
-								</span>
-							</div>
-							<p>
-								Lorem ipsum dolor sit amet, consec tetuer adipiscing elit, sed diam nonu
-							</p>
-						</div>
-						<div class="characteristic">
-							<div class="title">
-								<span class="border"></span>
-								<span>
-									NUTRION
-								</span>
-							</div>
-							<p>
-								Lorem ipsum dolor sit amet, consec tetuer adipiscing elit, sed diam nonu
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="order-container">
-		<div class="order-content container">
-			<div class="click">
-				<span>
-					FEW CLICK AWAY
-				</span>
-				<img src="../images/order-imges/sign.png" alt="Click">
-			</div>
-			<div class="payment">
-				<div class="form-title">
-					<div class="location">
-						<img src="../images/order-imges/icon-location.png" alt="Location">
-					</div>
-					<span>
-						ORDER NOW AND GET PURE SKIN
-					</span>
-				</div>
-				<form action="/" method="POST" class="form-payment">
-					<label for="country">
-						<p>Country</p>
-						<div class="wrap">
-							<select name="contry" id="country">
-								<option value="us" cheked>
-									United States (US)
-								</option>
-								<option value="ua">
-									Ukariane (UA)
-								</option>
-							</select>
-						</div>
-					</label>
-					<label for="state">
-						<p>State</p>
-						<div class="wrap">
-							<select name="state" id="state">
-								<option value="California" checked>
-									California
-								</option>
-								<option value="Florida">
-									Florida
-								</option>
-							</select>
-						</div>
-					</label>
-					<label for="address">
-						<p>Address:</p>
-						<input type="text" name="address" id="address" maxlength="30" minlength="3" placeholder="Enter home address" required>
-					</label>
-					<div class="town-info">
-						<label for="town">
-							<p>Town/City:</p>
-							<input type="text" name="town" id="town" maxlength="30" minlength="3" placeholder="Ex. San Francisco" required>
-						</label>
-						<label for="zip-code">
-							<p>Post/ZIP Code:</p>
-							<input type="text" name="zip-code" id="zip-code" maxlength="5" minlength="5" placeholder="_ _ - _ _ _" required>
-						</label>
-					</div>
-					<button name="payment" id="payment">
-						GO TO PAYMENT
-					</button>
-				</form>
-			</div>
-			<div class="flower">
-				<img src="../images/order-imges/flower.png" alt="Flower">
-			</div>
-		</div>
-	</section>
-	<section class="news-container">
-		<div class="news-content container">
-			<img src="../images/news-images/plant.png" alt="Plant">
-			<img src="../images/news-images/leaves.png" alt="Leaves">
-			<div class="news">
-				<h3>
-					WANT NEWS ABOUT OUR PRODUCT?
-				</h3>
-				<label for="mail">
-					<div class="subscribe-container">
-						<input type="text" name="mail" id="mail" maxlength="30" minlength="10" placeholder="Your e-mail" required>
-						<input type="button" name="subscribe" id="subscribe" value="SUBSCRIBE">
-					</div>
-				</label>
-				<span>
-					We do not share your information
-				</span>
-			</div>
-		</div>
-	</section>
-	<section class="pre-footer-container">
-		<div class="pre-footer-content container">
-			<div class="share-container">
-				<div class="pre-logo-container">
-					<img src="../images/logo.png" alt="Logo">
-					<span>
-						PURE
-					</span>
-					<span>
-						SKIN
-					</span>
-				</div>
-				<span>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a nunc imperdiet odio sodales blandit.
-				</span>
-				<div class="share-buttons">
-					<a href="https://twitter.com">
-						<img src="../images/share/twitter.png" alt="Twitter">
-					</a>
-					<a href="https://www.facebook.com">
-						<img src="../images/share/facebook.png" alt="Facebook">
-					</a>
-					<a href="https://plus.google.com">
-						<img src="../images/share/google.png" alt="Google+">
-					</a>
-					<a href="https://www.pinterest.com">
-						<img src="../images/share/pinterest.png" alt="Pinterest">
-					</a>
-					<a href="https://www.linkedin.com">
-						<img src="../images/share/inkedIn.png" alt="LinkedIn">
-					</a>
-				</div>
-			</div>
-			<div class="pre-footer-nav">
-				<div class="nav-item">
-					<h3>
-						ABOUT
-					</h3>
-					<a href="#">
-						Store locations
-					</a>
-					<a href="#">
-						Partner ships
-					</a>
-					<a href="#">
-						How it works?
-					</a>
-				</div>
-				<div class="nav-item">
-					<h3>
-						TERMS
-					</h3>
-					<a href="#">
-						Privacy police
-					</a>
-					<a href="#">
-						Terms & Conditions
-					</a>
-					<a href="#">
-						Shipping information
-					</a>
-				</div>
-				<div class="nav-item">
-					<h3>
-						SUPPORT
-					</h3>
-					<a href="#">
-						Contact us
-					</a>
-					<a href="#">
-						My account
-					</a>
-					<a href="#">
-						F.A.Q.
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<footer>
-		<div class="footer-container container">
-			<span>Copyright 2018 - <a href="#">pureskin.com</a></span>
-		</div>
-	</footer>
+			<button>Sign up</button>
+		</form>
+	</main>
 </body>
 </html>

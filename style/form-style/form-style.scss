@@ -1,0 +1,17 @@
+form {
+	border: 0.1875rem solid $main-border-color;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1rem;
+
+	& > label {
+		@include flex($flex-direction: column);
+	
+		& p {
+			margin-bottom: 0.3125rem;
+		}
+	}
+}
+
+form > label, .gender, .remember-me {
+	margin-bottom: 1.25rem;
+}
