@@ -1,22 +1,9 @@
 @import '../mixin/flex-mixin.scss';
-@import '../colors/colors.scss';
 
-/* Style for all tags */
+* {
+    box-sizing: border-box;
+}
 
-@import '../common-style/common-style.scss';
-
-/* Style for form */
-
-@import '../form-style/form-style.scss';
-
-/* Style fo radio */
-
-@import '../radio-style/radio-style.scss';
-
-/* Style for checkbox */
-
-@import '../checkbox-style/checkbox-style.scss';
-
-/* Style for button */
-
-@import '../button-style/button-style.scss';
+body {
+    margin: 0;
+}

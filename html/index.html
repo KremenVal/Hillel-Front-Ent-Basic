@@ -3,48 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Form</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" href="../style/index-style/index.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+	<title>Cover letter</title>
 </head>
 <body>
-	<main>
-		<form action="/" method="POST">
-			<label for="first-name">
-				<p>First name:</p>
-				<input type="text" name="first-name" id="first-name" minlength="3" maxlength="30" placeholder="Ivan" required>
-			</label>
-			<label for="last-name">
-				<p>Last name:</p>
-				<input type="text" name="last-name" id="last-name" minlength="3" maxlength="30" placeholder="Ivanov">
-			</label>
-			<label for="email">
-				<p>E-mail:</p>
-				<input type="email" name="email" id="email" minlength="6" maxlength="30" placeholder="example@gmail.com" required>
-			</label>
-			<label for="city">
-				<p>City/Town:</p>
-				<select name="city" id="city" required>
-					<option value="Kyiv" selected>Kyiv</option>
-					<option value="Dnepr">Dnepr</option>
-					<option value="Lviv">Lviv</option>
-					<option value="Kharkiv">Kharkiv</option>
-					<option value="Odessa">Odessa</option>
-				</select>
-			</label>
-			<div class="gender">
-				<span>Gender:</span>
-				<input type="radio" name="gender" id="male" value="Male" checked>
-				<label for="male"><span>Male</span></label>
-				<input type="radio" name="gender" id="female" value="Female">
-				<label for="female"><span>Female</span></label>
-			</div>
-			<div class="remember-me">
-				<input type="checkbox" name="remember-me" id="checkbox">
-				<label for="checkbox"><span>Remember me</span></label>
-			</div>
-			<button>Sign up</button>
-		</form>
-	</main>
+	
 </body>
 </html>
