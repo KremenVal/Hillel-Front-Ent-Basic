@@ -1,0 +1,7 @@
+@mixin font($color: #000, $font-family: "Lato", $font-size: 1rem, $font-weight: 400, $letter-spacing: 0) {
+    color: $color;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    letter-spacing: $letter-spacing;
+}

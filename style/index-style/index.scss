@@ -1,9 +1,44 @@
-@import '../mixin/flex-mixin.scss';
+@import '../mixin/font.scss';
+
+@font-face {
+	font-family: "Bebas Neue";
+	src: url('../../fonts/BebasNeue-Book.ttf');
+}
 
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-body {
-    margin: 0;
+body, h1 {
+	font-family: "Lato";
+	margin: 0;
 }
+
+h1 {
+	line-height: 1;
+}
+
+.wrapper {
+	height: 100vh;
+	padding: 0;
+}
+
+/* Header container */
+
+@import '../header-container/header-container.scss';
+
+/* Main info container */
+
+@import '../main-info-container/main-info-container.scss';
+
+/* Letter container */
+
+@import '../letter-container/letter-container.scss';
+
+/* Footer container */
+
+@import '../footer-container/footer-container.scss';
+
+/* Media */
+
+@import '../media/media.scss';
