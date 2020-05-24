@@ -1,3 +1,41 @@
+@media screen and (min-height: 320px) and (min-width: 500px) {
+	.menu-box {
+		.menu-links {
+			.links
+			{
+				@include flex;
+
+				.menu-item {
+					margin-top: 2rem;
+				}
+			}
+		}
+
+		.button-container {
+			margin-top: 2rem;
+		}
+	}
+}
+
+@media screen and (min-height: 411px) and (min-width: 500px) {
+	.menu-box {
+		.menu-links {
+			.links
+			{
+				@include flex;
+
+				.menu-item {
+					margin-top: 2rem;
+				}
+			}
+		}
+
+		.button-container {
+			margin-top: 4rem;
+		}
+	}
+}
+
 @media screen and (min-width: 576px) {
 	#contact-active {
 		&:checked ~ .contact-form .form .image-close {
@@ -52,6 +90,8 @@
 
 	#menu, #close {
 		&:checked ~ .opacity {
+			@include position($left: 0, $top: 0%, $position: absolute);
+
 			background-color: rgba($color: #222, $alpha: 0.8);
 			z-index: 1;
 		}
@@ -78,9 +118,32 @@
 
 		padding: 4rem 2rem;
 	}
+
+	.intorduction-container {
+		background-image: url('../../images/introduction-container/beard-tablet.png');
+
+		.intorduction-content {
+			padding: 8.375rem 0 2.8125rem 2.125rem;
+
+			img {
+				@include sizes($width: 25rem);
+
+				margin-bottom: 0.875rem;
+			}
+
+			p {
+				width: 25rem;
+				margin-bottom: 1.625rem;
+			}
+
+			a {
+				@include sizes($width: 10.3125rem);
+			}
+		}
+	}
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (min-height: 576px) {
 	#contact-active {
 		&:checked ~ .contact-form .form .image-close {
 			margin-top: 2.375rem;
@@ -106,6 +169,13 @@
 	}
 
 	#menu, #close {
+		&:checked ~ .opacity {
+			@include position($left: 0, $top: 0%, $position: absolute);
+
+			background-color: rgba($color: #222, $alpha: 0.8);
+			z-index: 1;
+		}
+
 		&:checked ~ .menu-box .menu-button-close {
 			@include position($top: 2.375rem, $right: 2.375rem, $position: absolute);
 		}
@@ -115,8 +185,22 @@
 		}
 	}
 
+	#close {
+		&:checked ~ .opacity {
+			background-color: transparent;
+			z-index: 0;
+		}
+	}
+
 	.menu-box {
 		@include sizes($height: 100%, $width: 46vw);
+
+		.menu-links {
+			.links
+			{
+				@include flex($flex-direction: column);
+			}
+		}
 
 		.button-container {
 			margin-top: 13.9375rem;
@@ -127,6 +211,10 @@
 		.header-content {
 			padding: 2.375rem 2.125rem;
 		}
+	}
+
+	.home {
+		@include sizes($height: 6.25rem, $width: 100%);
 	}
 }
 
@@ -167,6 +255,10 @@
 			}
 		}
 	}
+	
+	.opacity {
+		display: none;
+	}
 
 	.header-container {
 		margin: 0 auto;
@@ -196,6 +288,36 @@
 
 			.desktop-button-container {
 				@include flex;
+			}
+		}
+	}
+
+	.home {
+		@include sizes($height: 6.0625rem, $width: 100%);
+	}
+
+	.intorduction-container {
+		background-image: url('../../images/introduction-container/beard.png');
+
+		.intorduction-content {
+			padding: 13.0625rem 0 19.4375rem 3.5rem;
+			margin: 0 auto;
+
+			img {
+				@include sizes($width: 37.5rem);
+
+				margin-bottom: 4.5rem;
+			}
+
+			p {
+				@include sizes($width: 37.5rem);
+			
+				font-size: 2rem;
+				margin-bottom: 3.75rem;
+			}
+
+			a {
+				@include sizes($width: 10.3125rem);
 			}
 		}
 	}

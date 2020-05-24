@@ -13,7 +13,7 @@
 .menu-box {
 	@include flex($flex-direction: column);
 	@include sizes($height: 100%, $width: 100%);
-	@include position($left: 0, $top: -100%, $position: absolute);
+	@include position($left: 0, $top: -100%, $position: fixed);
 
 	background-color: $main-background-color;
 	padding: 4rem 1rem;

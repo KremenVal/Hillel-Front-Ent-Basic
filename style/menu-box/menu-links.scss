@@ -1,4 +1,6 @@
 .menu-links {
+	@include flex($flex-direction: column);
+
 	img {
 		@include sizes($width: 6.875rem);
 	}
@@ -7,11 +9,16 @@
 		@include flex($align-items: center);
 
 		margin-left: 1.9375rem;
+		width: 4.4375rem;
 
 		&:not(:first-child) {
-			margin-top: 1.5rem;
+			margin-top: 2rem;
 		}
 
+		&:nth-child(1) {
+			margin-top: 2.75rem;
+		}
+	
 		img {
 			@include sizes($width: 0.3125rem);
 
@@ -28,4 +35,4 @@
 			}
 		}
 	}
-}
+}	

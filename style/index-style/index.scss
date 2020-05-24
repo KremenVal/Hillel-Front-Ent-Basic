@@ -49,7 +49,7 @@ label:focus, label:active {
 
 .opacity {
 	@include sizes($height: 100%, $width: 100%);
-	@include position($left: 0, $top: 0, $position: absolute);
+	@include position($left: 0, $top: -100%, $position: absolute);
 
 	background-color: rgba($color: #222, $alpha: 0);
 	transition-duration: 0.5s;
@@ -63,6 +63,14 @@ label:focus, label:active {
 /* Header container */
 
 @import '../header-container/header-contrainer.scss';
+
+/* Introduction container */
+
+.home {
+	@include sizes($height: 4.25rem, $width: 100%);
+}
+
+@import '../introduction-container/introduction-container.scss';
 
 /* Media */
 

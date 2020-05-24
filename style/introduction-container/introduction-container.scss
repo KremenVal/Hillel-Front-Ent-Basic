@@ -1,0 +1,35 @@
+.intorduction-container {
+	background-image: url('../../images/introduction-container/beard-mobile.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: bottom;
+
+	.intorduction-content {
+		padding: 13.3125rem 1.1rem 3.25rem 1.1rem;
+
+		img {
+			@include sizes($width: ‬‬18rem);
+
+			margin-bottom: 2rem;
+		}
+
+		p {
+			@include sizes($width: 17.3125rem);
+			
+			color: $white-color;
+			font-size: 1rem;
+			margin-bottom: 1rem;
+		}
+
+		a {
+			@include flex($align-items: center, $justify-content: center);
+			@include sizes($width: 18rem);
+
+			color: $white-color;
+			background-color: $main-text-color;
+			border-radius: 0.25rem;
+			font-weight: bold;
+			padding: 1rem 0;
+		}
+	}
+}
