@@ -1,44 +1,70 @@
-@import '../mixin/font.scss';
-
-@font-face {
-	font-family: "Bebas Neue";
-	src: url('../../fonts/BebasNeue-Book.ttf');
-}
+@import '../colors/colors.scss';
+@import '../mixin/sizes.scss';
+@import '../mixin/flex.scss';
+@import '../mixin/position.scss';
+@import '../mixin/style-for-menu-burger.scss';
 
 * {
 	box-sizing: border-box;
 }
 
-body, h1 {
-	font-family: "Lato";
+body, h1, p {
+	font-family: 'Montserrat', sans-serif;
 	margin: 0;
 }
 
-h1 {
-	line-height: 1;
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+ul {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+label:focus, label:active {
+	-webkit-tap-highlight-color: transparent;
+}
+
+.container {
+	width: 100%;
+	position: relative;
 }
 
 .wrapper {
-	height: 100vh;
-	padding: 0;
+	width: 100%;
 }
+
+/* Radio */
+
+@import '../radio/radio.scss';
+
+/* Contac form */
+
+@import '../contact-form/contact-form.scss';
+
+.opacity {
+	@include sizes($height: 100%, $width: 100%);
+	@include position($left: 0, $top: 0, $position: absolute);
+
+	background-color: rgba($color: #222, $alpha: 0);
+	transition-duration: 0.5s;
+	z-index: 0;
+}
+
+/* Menu box */
+
+@import '../menu-box/menu-box.scss';
 
 /* Header container */
 
-@import '../header-container/header-container.scss';
-
-/* Main info container */
-
-@import '../main-info-container/main-info-container.scss';
-
-/* Letter container */
-
-@import '../letter-container/letter-container.scss';
-
-/* Footer container */
-
-@import '../footer-container/footer-container.scss';
+@import '../header-container/header-contrainer.scss';
 
 /* Media */
 
 @import '../media/media.scss';
+

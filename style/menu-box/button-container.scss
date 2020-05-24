@@ -1,0 +1,27 @@
+.button-container {
+	@include flex($flex-direction: column);
+
+	margin: 0 auto;
+	margin-top: 10.0625rem;
+	
+	a, label {
+		border-radius: 0.25rem;
+		padding: 1rem 5.5625rem;
+		transition-duration: 0.5s;
+		-webkit-tap-highlight-color: transparent;
+		
+		&:hover {
+			box-shadow: 0 0 0.5rem $main-text-color;
+		}
+	}
+
+	.btn-contact {
+		border: 0.0625rem solid $white-color;
+		margin-bottom: 1rem;
+	}
+
+	.btn-book {
+		background-color: $main-text-color;
+		padding: 1rem 5.8125rem;
+	}
+}

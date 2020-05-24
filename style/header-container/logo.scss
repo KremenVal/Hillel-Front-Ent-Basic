@@ -1,0 +1,5 @@
+.logo {
+	@include sizes($width: 9.625rem);
+
+	display: none;
+}

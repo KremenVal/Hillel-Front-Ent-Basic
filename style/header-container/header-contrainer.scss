@@ -1,0 +1,17 @@
+.header-container {
+	background-color: $main-background-color;
+	position: fixed;
+	width: 100%;
+
+	.header-content {
+		@include flex($align-items: center, $justify-content: space-between);
+
+		margin: 0 auto;
+		padding: 1.375rem 1.125rem;
+
+		@import '../header-container/logo.scss';
+		@import '../header-container/navigation.scss';
+		@import '../header-container/union.scss';
+		@import '../header-container/desktop-button-container.scss';
+	}
+}

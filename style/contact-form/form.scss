@@ -1,0 +1,79 @@
+.form {
+	@include flex($align-items: center, $flex-direction: column, $justify-content: center);
+	
+	background-color: $white-color;
+	border-radius: 0;
+	padding: 0 1rem 4rem 1rem;
+	margin-top: 4.25rem;
+
+	.image-close {
+		cursor: pointer;
+		opacity: 0;
+		margin-top: 2.375rem;
+		margin-left: 16.375rem;
+		transition-duration: 0.5s;
+	}
+
+	& > span {
+		color: #222;
+		font-weight: bold;
+		margin-top: 2.375rem;
+		text-transform: uppercase;
+	}
+
+	& > p {
+		color: #222;
+		margin-top: 0.75rem;
+		text-align: center;
+		margin-bottom: 2rem;
+		width: 18rem;
+	}
+
+	label {
+		width: 100%;
+	}
+
+	.info-input {
+		margin-bottom: 1rem;
+	}
+
+	.info-input, .comment {
+		margin-bottom: 2rem;
+
+		p {
+			color: #222;
+			margin-bottom: 0.5rem;
+			margin-left: 1.25rem;
+		}
+	}
+
+	input, textarea {
+		@include sizes($height: 2.75rem, $width: 100%);
+
+		border: 0.0625rem solid #DFDFDF;
+		border-radius: 0.25rem;
+		outline: none;
+		padding: 1rem 0 1rem 1rem;
+
+		&::placeholder {
+			color: #DFDFDF;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 1rem;
+		}
+	}
+
+	textarea {
+		height: 5.875rem;
+		resize: vertical;
+	}
+
+	button {
+		border: none;
+		background-color: $main-text-color;
+		color: $white-color;
+		border-radius: 0.25rem;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: bold;
+		padding: 1rem 5.5rem;
+	}
+}

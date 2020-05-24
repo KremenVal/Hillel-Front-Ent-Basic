@@ -1,35 +1,202 @@
-@media screen and (min-width: 320px) {
-	html {
-		font-size: 0.3rem;
-	}
-}
-
-@media screen and (min-width: 450px) {
-	.main-info-container {
-		.web-links {
-			margin: 0;
+@media screen and (min-width: 576px) {
+	#contact-active {
+		&:checked ~ .contact-form .form .image-close {
+			margin-top: 2.375rem;
+			margin-left: 0;
+			right: 0;
 		}
+
+		&:checked ~ .menu-button-close {
+			@include position($right: 2.375rem, $position: absolute);
+			@include position($left: 49vw, $right: 0, $position: absolute);
+		}
+
+		&:checked ~ .menu-box {
+			@include sizes($height: 100%, $width: 61vw);
+		}
+	}
+
+	.contact-form {
+		.form {
+			border-radius: 0.25rem;
+			padding: 0 2.75rem 4rem 2.75rem;
+			margin-top: 4.75rem;
+
+			label:first-child {
+				@include flex($justify-content: flex-end);
+
+				.image-close {
+					margin-top: 4.3125rem;
+					margin-left: 0;
+					margin-right: 10px;
+				}
+			}
+
+			& > span {
+				font-size: 2rem;
+				margin-top: 0;
+				text-transform: unset;
+
+				span {
+					text-transform: capitalize;
+				}
+			}
+
+			& > p {
+				margin-top: 1rem;
+				margin-bottom: 2rem;
+				width: 26.1875rem;
+			}
+		}
+	}
+
+	#menu, #close {
+		&:checked ~ .opacity {
+			background-color: rgba($color: #222, $alpha: 0.8);
+			z-index: 1;
+		}
+
+		&:checked ~ .menu-button-close {
+			@include position($right: 2.375rem, $position: absolute);
+			@include position($left: 49vw, $right: 0, $position: absolute);
+		}
+
+		&:checked ~ .menu-box {
+			@include sizes($height: 100%, $width: 61vw);
+		}
+	}
+
+	#close {
+		&:checked ~ .opacity {
+			z-index: 0;
+			background-color: transparent;
+		}
+	}
+
+	.menu-box {
+		@include sizes($height: 100%, $width: 61vw);
+
+		padding: 4rem 2rem;
 	}
 }
 
 @media screen and (min-width: 768px) {
-	html {
-		font-size: 0.4rem;
+	#contact-active {
+		&:checked ~ .contact-form .form .image-close {
+			margin-top: 2.375rem;
+			margin-left: 0;
+			right: 0;
+		}
+
+		&:checked ~ .menu-box .menu-button-close {
+			@include position($top: 2.375rem, $right: 2.375rem, $position: absolute);
+		}
+
+		&:checked ~ .menu-box {
+			@include sizes($height: 100%, $width: 46vw);
+		}
+	}
+
+	.contact-form {
+		.form {
+			@include sizes($width: 43rem);
+
+			margin-top: 6.75rem;
+		}
+	}
+
+	#menu, #close {
+		&:checked ~ .menu-box .menu-button-close {
+			@include position($top: 2.375rem, $right: 2.375rem, $position: absolute);
+		}
+
+		&:checked ~ .menu-box {
+			@include sizes($height: 100%, $width: 46vw);
+		}
+	}
+
+	.menu-box {
+		@include sizes($height: 100%, $width: 46vw);
+
+		.button-container {
+			margin-top: 13.9375rem;
+		}
+	}
+
+	.header-container {
+		.header-content {
+			padding: 2.375rem 2.125rem;
+		}
 	}
 }
 
-@media screen and (min-width: 1000px) {
-	html {
-		font-size: 0.6rem;
-	}
-}
-
-@media screen and (min-width: 4000px) {
-	html {
-		font-size: 1rem;
+@media screen and (min-width: 1325px) {
+	.wrapper {
+		width: 1325px;
 	}
 
-	.container-lg {
-		max-width: 2000px;
+	#contact-active {
+		&:checked ~ .contact-form .form .image-close {
+			margin-right: -2.6875rem;
+		}
+	}
+	
+	.contact-form {
+		.form {
+			@include sizes($width: 53.25rem);
+
+			margin-top: 12.5rem;
+			padding: 0 7.875rem 4rem 7.875rem;
+
+			.image-close {
+				margin-right: -2.6875rem;
+			}
+
+			& > span {
+				font-size: 2rem;
+				text-transform: unset;
+
+				span {
+					text-transform: capitalize;
+				}
+			}
+
+			& > p {
+				width: 26.1875rem;
+				margin-bottom: 4rem;
+			}
+		}
+	}
+
+	.header-container {
+		margin: 0 auto;
+
+		.header-content {
+			@include flex($align-items: center, $justify-content: flex-start);
+
+			padding: 1.375rem 3.625rem;
+
+			.logo {
+				@include flex;
+			}
+
+			.menu-button {
+				display: none;
+			}
+
+			.navigation {
+				@include flex;
+			}
+
+			.union {
+				@include flex($align-items: center);
+
+				margin-left: 8rem;
+			}
+
+			.desktop-button-container {
+				@include flex;
+			}
+		}
 	}
 }

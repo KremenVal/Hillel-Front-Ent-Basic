@@ -1,0 +1,31 @@
+.menu-links {
+	img {
+		@include sizes($width: 6.875rem);
+	}
+
+	.menu-item {
+		@include flex($align-items: center);
+
+		margin-left: 1.9375rem;
+
+		&:not(:first-child) {
+			margin-top: 1.5rem;
+		}
+
+		img {
+			@include sizes($width: 0.3125rem);
+
+			opacity: 0;
+			margin-right: 0.25rem;
+		}
+
+		&:hover {
+			color: $main-text-color;
+			font-weight: 800;
+
+			img {
+				opacity: 1;
+			}
+		}
+	}
+}

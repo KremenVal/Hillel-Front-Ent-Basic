@@ -1,0 +1,14 @@
+.contact-form {
+	@include flex($justify-content: center);
+	@include sizes($height: 100%, $width: 100%);
+	@include position($left: 0, $top: -150%, $position: absolute);
+
+	background-color: rgba($color: #222, $alpha: 0.8);
+	opacity: 0;
+	z-index: 1;
+	transition-duration: 0.5s;
+
+	/* Form burger */
+	
+	@import './form.scss';
+}

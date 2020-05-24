@@ -1,0 +1,34 @@
+.menu-button-close, .header-container .header-content .menu-button {
+	@include menu;
+}
+
+.menu-button-close {
+	@include position($right: 1.4375rem, $position: absolute);
+
+	span {
+		border-radius: 0;
+	}
+}
+
+.menu-box {
+	@include flex($flex-direction: column);
+	@include sizes($height: 100%, $width: 100%);
+	@include position($left: 0, $top: -100%, $position: absolute);
+
+	background-color: $main-background-color;
+	padding: 4rem 1rem;
+	transition: all 0.5s;
+	z-index: 1;
+
+	a, label {
+		color: $white-color;
+	}
+
+	/* Menu links */
+
+	@import './menu-links.scss';
+
+	/* Desktop button */
+
+	@import './button-container.scss';
+}

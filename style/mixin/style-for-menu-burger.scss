@@ -1,0 +1,28 @@
+@mixin menu {
+	@include flex($align-items: flex-end, $flex-direction: column);
+	@include sizes($height: 1.125rem, $width: 1.75rem);
+
+	cursor: pointer;
+	margin: auto 0;
+	z-index: 1;
+
+	& span {
+		@include sizes($height: 0.2rem, $width: 1.75rem);
+
+		background-color: $white-color;
+		border-radius: 0.125rem;
+		position: absolute;
+	}
+
+	& span:nth-child(2) {
+		margin-top: 0.445rem;
+	}
+
+	& span:nth-child(3) {
+		margin-top: 0.89rem;
+	}
+
+	& span {
+		transition-duration: 0.5s;
+	}
+}

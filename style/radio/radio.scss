@@ -1,0 +1,42 @@
+#contact-active, #form-close, #menu, #close {
+	display: none;
+}
+
+#contact-active {
+	&:checked ~ .contact-form {
+		@include position($left: 0, $top: 0, $position: absolute);
+		
+		opacity: 1;
+	}
+
+	&:checked ~ .contact-form .form .image-close {
+		margin-top: 2.375rem;
+		margin-left: 16.375rem;
+		opacity: 1;
+	}
+
+	&:checked ~ .header-container .header-content .hamburger-menu .menu-button-close span {
+		right: 1.4375rem;
+	}
+}
+
+#menu {
+	&:checked ~ .menu-box .menu-button-close {
+		@include position($right: 1.4375rem, $top: 2.375rem, $position: absolute);
+	}
+
+	&:checked ~ .menu-box .menu-button-close > span:nth-child(-n + 2) {
+		margin-top: 0.5rem;
+		transform: rotate(45deg);
+	}
+	
+	&:checked ~ .menu-box .menu-button-close > span:nth-child(3) {
+		margin-top: 0.5rem;
+		transform: rotate(-45deg);
+	}
+
+	&:checked ~ .menu-box {
+		@include sizes($height: 100%, $width: 100%);
+		top: 0;
+	}
+}
