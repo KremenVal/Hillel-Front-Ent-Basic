@@ -1,0 +1,39 @@
+.services-container {
+	background-color: rgba(0, 0, 0, 0.8);
+	
+	.services-content {
+		margin: 0 auto;
+		.services-proposition {
+			@include flex($flex-direction: column);
+
+			padding: 2rem 0 4rem 1rem;
+
+			.services-item {
+				@include flex($align-items: center);
+
+				&:not(:last-child) {
+					margin-bottom: 1.375rem;
+				}
+	
+				img {
+					@include sizes($width: 3.6875rem);
+
+					margin-right: 0.5rem;
+				}
+
+				.proposition {
+					@include flex($flex-direction: column);
+
+					color: $white-color;
+
+					& > span:first-child {
+						font-weight: bold;
+						line-height: 1;
+						text-transform: uppercase;
+						margin-bottom: 0.5rem;
+					}
+				}
+			}
+		}
+	}
+}

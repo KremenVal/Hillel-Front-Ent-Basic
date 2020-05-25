@@ -1,0 +1,25 @@
+.text-services-container {
+	background-color: $white-color;
+
+	.text-services-content {
+		margin: 0 auto;
+
+		.services {
+			@include flex($align-items: center);
+
+			padding: 2rem 0 1rem 1.125rem;
+
+			img {
+				@include sizes($width: 0.5625rem);
+
+				margin-right: 0.5rem;
+			}
+
+			span {
+				color: $main-text-color;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+		}
+	}
+}

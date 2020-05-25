@@ -72,6 +72,12 @@ label:focus, label:active {
 
 @import '../introduction-container/introduction-container.scss';
 
+/* Services container */
+
+@import '../services-container/salon-background.scss';
+@import '../services-container/text-services-container.scss';
+@import '../services-container/services-container.scss';
+
 /* Media */
 
 @import '../media/media.scss';

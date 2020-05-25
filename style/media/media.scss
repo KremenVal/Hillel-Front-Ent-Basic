@@ -108,9 +108,15 @@
 
 	#close {
 		&:checked ~ .opacity {
+			@include position($left: 0, $top: -100%, $position: absolute);
+
+			background-color: rgba($color: #222, $alpha: 0.8);
 			z-index: 0;
-			background-color: transparent;
 		}
+	}
+
+	.opacity {
+		@include position($left: 0, $top: -100%, $position: absolute);
 	}
 
 	.menu-box {
@@ -138,6 +144,15 @@
 
 			a {
 				@include sizes($width: 10.3125rem);
+			}
+		}
+	}
+
+	.services-container {
+		.services-content{
+			.services-proposition {
+				@include flex($flex-direction: column, $flex-wrap: wrap);
+				@include sizes($height: 22.3125rem, $width: 100%);
 			}
 		}
 	}
@@ -187,7 +202,9 @@
 
 	#close {
 		&:checked ~ .opacity {
-			background-color: transparent;
+			@include position($left: 0, $top: -100%, $position: absolute);
+
+			background-color: rgba($color: #222, $alpha: 0.8);
 			z-index: 0;
 		}
 	}
@@ -215,6 +232,64 @@
 
 	.home {
 		@include sizes($height: 6.25rem, $width: 100%);
+	}
+
+	.text-services-container {
+		.text-services-content {
+			.services {
+				@include flex($align-items: center, $justify-content: center);
+
+				padding: 4rem 0 1.5rem ;
+
+				span {
+					font-size: 2rem;
+					text-transform: capitalize;
+				}
+			}
+		}
+	}
+
+	.services-container {
+		.services-content{
+			.services-proposition {
+				@include flex($flex-direction: column, $flex-wrap: wrap);
+				@include sizes($height: 29.3125rem, $width: 100%);
+
+				padding: 2.75rem 0 4rem 2rem;
+
+				.services-item {
+					&:not(:last-child) {
+						margin-bottom: 3.8125rem;
+					}
+
+					&:nth-child(3) {
+						margin-bottom: 0;
+					}
+
+					img {
+						@include sizes($width: 4.3125rem);
+	
+						margin-right: 0;
+					}
+
+					.proposition {
+						@include flex($flex-direction: column);
+	
+						color: $white-color;
+	
+						& > span:first-child {
+							font-size: 2rem;
+							font-weight: bold;
+							text-transform: unset;
+						}
+
+						.bold {
+							font-weight: bold;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -262,6 +337,7 @@
 
 	.header-container {
 		margin: 0 auto;
+		z-index: 2;
 
 		.header-content {
 			@include flex($align-items: center, $justify-content: flex-start);
@@ -318,6 +394,78 @@
 
 			a {
 				@include sizes($width: 10.3125rem);
+			}
+		}
+	}
+
+	.salon-background {
+		@include flex;
+	}
+
+	.text-services-container {
+		.text-services-content {
+			.services {
+				@include flex($align-items: center, $justify-content: center);
+
+				padding: 10rem 0 2.75rem;
+
+				span {
+					z-index: 1;
+					font-size: 4rem;
+					text-transform: capitalize;
+				}
+			}
+		}
+	}
+
+	.services-container {
+		.services-content{
+			.services-proposition {
+				@include flex($flex-direction: column, $flex-wrap: wrap);
+				@include sizes($height: 25rem, $width: 100%);
+
+				padding: 6.25rem 3.75rem;
+
+				.services-item {
+					&:nth-child(odd) {
+						margin-bottom: 2.6rem;
+					}
+
+					&:nth-child(even) {
+						margin-bottom: 0;
+					}
+
+					&:not(:nth-child(-n + 2)) {
+						margin-left: 8.75rem;
+					}
+
+					img {
+						@include sizes($width: 4.3125rem);
+	
+						margin-right: 0;
+						z-index: 1;
+					}
+
+					.proposition {
+						@include flex($flex-direction: column);
+	
+						color: $white-color;
+
+						span {
+							z-index: 1;
+						}
+	
+						& > span:first-child {
+							font-size: 2rem;
+							font-weight: bold;
+							text-transform: unset;
+						}
+
+						.bold {
+							font-weight: bold;
+						}
+					}
+				}
 			}
 		}
 	}

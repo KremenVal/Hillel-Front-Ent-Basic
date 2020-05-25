@@ -1,0 +1,8 @@
+.salon-background {
+    @include sizes($height: 44.875rem, $width: 68.75rem);
+    @include position($position: absolute);
+
+    background-image: url('../../images/services-container/salon.png');
+    display: none;
+    margin-top: 5.5rem;
+}
