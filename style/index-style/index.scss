@@ -3,12 +3,13 @@
 @import '../mixin/flex.scss';
 @import '../mixin/position.scss';
 @import '../mixin/style-for-menu-burger.scss';
+@import '../mixin/common-staff-style.scss';
 
 * {
 	box-sizing: border-box;
 }
 
-body, h1, p {
+body, h1, h2, p, span {
 	font-family: 'Montserrat', sans-serif;
 	margin: 0;
 }
@@ -77,6 +78,10 @@ label:focus, label:active {
 @import '../services-container/salon-background.scss';
 @import '../services-container/text-services-container.scss';
 @import '../services-container/services-container.scss';
+
+/* Our team container */
+
+@import '../our-team-container/our-team-container.scss';
 
 /* Media */
 

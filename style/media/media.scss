@@ -36,6 +36,34 @@
 	}
 }
 
+@media screen and (min-height: 411px) {
+	.our-team-container #jorge-jones:checked ~ .our-team-content {
+		height: 46.875rem;
+	}
+}
+
+@media screen and (min-width: 468px) {
+	.our-team-container {
+		#jorge-jones {
+			&:checked ~ .our-team-content .info-about-team .staff-biography .jorge-jones-biography h2 {
+				margin-left: 9.125rem;
+			}
+		}
+
+		.our-team-content {
+			.info-about-team {
+				.photo-team {
+					label {
+						&:first-child {
+							@include flex;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 @media screen and (min-width: 576px) {
 	#contact-active {
 		&:checked ~ .contact-form .form .image-close {
@@ -89,6 +117,14 @@
 	}
 
 	#menu, #close {
+		&:checked ~ .header-container {
+			z-index: 0;
+		}
+
+		&:checked ~ .our-team-container .our-team-content .info-about-team {
+			z-index: -1;
+		}
+		
 		&:checked ~ .opacity {
 			@include position($left: 0, $top: 0%, $position: absolute);
 
@@ -107,6 +143,14 @@
 	}
 
 	#close {
+		&:checked ~ .header-container {
+			z-index: 1;
+		}
+
+		&:checked ~ .our-team-container .our-team-content .info-about-team {
+			z-index: 0;
+		}
+
 		&:checked ~ .opacity {
 			@include position($left: 0, $top: -100%, $position: absolute);
 
@@ -153,6 +197,42 @@
 			.services-proposition {
 				@include flex($flex-direction: column, $flex-wrap: wrap);
 				@include sizes($height: 22.3125rem, $width: 100%);
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 610px) {
+	.our-team-container {
+		#jorge-jones {
+			&:checked ~ .our-team-content .info-about-team .staff-biography .jorge-jones-biography {
+				margin-left: 8.6rem;
+
+				h2 {
+					margin-left: 0;
+				}
+			}
+		}
+
+		#yoda {
+			&:checked ~ .our-team-content .info-about-team .staff-biography .yoda-biography {
+				margin-left: 8.6rem;
+				
+				h2 {
+					margin-left: 8.6rem;
+				}
+			}
+		}
+
+		.our-team-content {
+			.info-about-team {
+				.photo-team {
+					label {
+						&:nth-child(3) {
+							@include flex;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -285,6 +365,66 @@
 
 						.bold {
 							font-weight: bold;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.our-team-container {
+		#darth-vader {
+			@include common-biography($biography: 1, $margin-right: 5.25rem, $margin-right-other: 0.5rem, $scale: 1.462, $magin-top: 9rem, $max-height: 49.875rem);
+		}
+
+		#jorge-jones {
+			@include common-biography($biography: 2, $margin-right: 5.25rem, $margin-right-other: 0.5rem, $scale: 1.462, $magin-top: 9rem, $max-height: 49.875rem);
+		}
+
+		#yoda {
+			@include common-biography($biography: 3, $margin-right: 5.25rem, $margin-right-other: 0.5rem, $scale: 1.462, $magin-top: 9rem, $max-height: 49.875rem);
+		}
+
+		#darth-sidious {
+			@include common-biography($biography: 4, $margin-right: 5.25rem, $margin-right-other: 0.5rem, $scale: 1.462, $magin-top: 9rem, $max-height: 49.875rem);
+
+			&:checked ~ .our-team-content .info-about-team .staff-biography div:nth-child(4) {
+				margin-left: 15.5rem;
+				
+				h2 {
+					margin-left: 10.4rem;
+				}
+			}
+		}
+
+		.our-team-content {
+			padding: 4rem 2.5rem;
+
+			.our-team {
+				span {
+					font-size: 2rem;
+					text-transform: capitalize;
+				}
+			}
+			
+			.info-about-team {
+				margin: 0 auto;
+				margin-top: 2.5625rem;
+				
+				.photo-team {
+					label {
+						&:nth-child(4) {
+							@include flex;
+						}
+					}
+				}
+
+				.staff-biography {
+					div {
+						h2 {
+							margin-top: 2.5rem;
 						}
 					}
 				}
@@ -463,6 +603,117 @@
 
 						.bold {
 							font-weight: bold;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.our-team-container {
+		#darth-vader {
+			@include common-biography($biography: 1, $margin-right: 5.6rem, $margin-right-other: 0.5rem, $scale: 1.516, $magin-top: 2.5rem, $max-height: 49.875rem);
+		
+			&:checked ~ .our-team-content .info-about-team .staff-biography div:nth-child(1) {
+				margin-left: 6rem;
+				
+				h2 {
+					margin-left: 0rem;
+				}
+			}
+		}
+
+		#jorge-jones {
+			@include common-biography($biography: 2, $margin-right: 5.6rem, $margin-right-other: 0.5rem, $scale: 1.516, $magin-top: 2.5rem, $max-height: 49.875rem);
+			
+			&:checked ~ .our-team-content .info-about-team .staff-biography div:nth-child(2) {
+				margin-left: 6rem;
+				
+				h2 {
+					margin-left: 0rem;
+				}
+			}
+		}
+
+		#yoda {
+			@include common-biography($biography: 3, $margin-right: 5.6rem, $margin-right-other: 0.5rem, $scale: 1.516, $magin-top: 2.5rem, $max-height: 49.875rem);
+			
+			&:checked ~ .our-team-content .info-about-team .staff-biography div:nth-child(3) {
+				margin-left: 6rem;
+				
+				h2 {
+					margin-left: 0rem;
+				}
+			}
+		}
+
+		#darth-sidious {
+			@include common-biography($biography: 4, $margin-right: 5.6rem, $margin-right-other: 0.5rem, $scale: 1.516, $magin-top: 2.5rem, $max-height: 49.875rem);
+
+			&:checked ~ .our-team-content .info-about-team .staff-biography div:nth-child(4) {
+				margin-left: 6rem;
+				
+				h2 {
+					margin-left: 0rem;
+				}
+			}
+		}
+
+		.our-team-content {
+			padding: 16.5625rem 3.625rem 6.25rem 3.625rem;
+
+			.our-team {				
+				img {
+					@include sizes($width: 1.3125rem);
+	
+					margin-right: 1.5rem;
+				}
+
+				span {
+					font-size: 4rem;
+					text-transform: unset;
+				}
+			}
+			
+			.info-about-team {
+				@include flex($align-items: flex-end, $flex-direction: row);
+			
+				margin: 0;
+				margin-top: 2.5625rem;
+				max-width: 43.5rem;
+				
+				.photo-team {
+					label {
+						@include sizes($height: 12.5rem, $width: 8.125rem);
+						
+						margin-right: 0.5rem;
+
+						.staff {
+							@include sizes($height: 12.5rem, $width: 8.125rem);
+						}
+
+						&:nth-child(4) {
+							@include flex;
+						}
+					}
+				}
+
+				.staff-biography {
+					position: relative;
+					margin-bottom: 19.3rem;
+
+					div {
+						width: 27.5625rem;
+
+						h2 {
+							font-size: 2rem;
+							margin-top: 2.5rem;
+						}
+						
+						span {
+							&:nth-child(2) {
+								margin-top: 1.5rem;
+							}
 						}
 					}
 				}

@@ -1,0 +1,109 @@
+.our-team-container {
+	@import './staff-radio.scss';
+
+	.our-team-content {
+		@include flex($align-items: flex-start, $flex-direction: column);
+
+		height: auto;
+		margin: 0 auto;
+		padding: 2rem 1rem;
+		transition-duration: 0.5s;
+
+		.our-team {
+			@include flex($align-items: center, $justify-content: flex-end);
+
+			width: 100%;
+			
+			img {
+				@include sizes($width: 0.5625rem);
+
+				margin-right: 0.5rem;
+			}
+
+			span {
+				color: $main-text-color;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+		}
+
+		.info-about-team {
+			@include flex($flex-direction: column, $align-items: flex-start);
+			position: relative;
+			max-width: 48rem;
+			margin-top: 2.5625rem;
+			z-index: 0;
+
+			.photo-team {
+				@include flex($align-items: flex-end, $justify-content: flex-start);
+
+				label {
+					@include sizes($height: 12.0625rem, $width: 8.125rem);
+
+					background-color: $main-text-color;
+					cursor: pointer;
+					margin-right: 1rem;
+					transition-duration: 0.5s;
+					position: relative;
+
+					.photo-background {
+						@include sizes($height: 100%, $width: 100%);
+
+						background-color: $main-text-color;
+						position: absolute;
+						z-index: -1;
+						transition-duration: 0.5s;
+						transform-origin: left center;
+					}
+
+					.staff {
+						@include sizes($height: 12.0625rem, $width: 8.125rem);
+					}
+
+					&:not(:nth-child(2)) {
+						display: none;
+					}
+				}
+
+				.next-staff {
+					@include flex($align-items: center, $justify-content: center);
+					@include sizes($height: 3.3125rem, $width: 3.3125rem);
+
+					background-color: #FFF2E5;
+					cursor: pointer;
+
+					img {
+						@include sizes($height: 1.25rem);
+					}
+				}
+			}
+
+			.staff-biography {
+				div {
+					@include flex($flex-direction: column);
+					@include position($position: absolute, $left: -110%);
+					@include sizes($height: 100%, $width:100%);
+
+					max-width: 27.5625rem;
+					opacity: 0;
+					transition-duration: 0.5s;
+
+					h2 {
+						color: $main-text-color;
+						font-size: 1rem;
+						margin-top: 2.5625rem;
+						margin-left: 0;
+					}
+
+					span {
+						color: #222;
+
+						&:nth-child(2) {
+							margin-top: 1rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}

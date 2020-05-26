@@ -1,0 +1,27 @@
+input {
+	display: none;
+}
+
+/* Darth Vader radio */
+
+#darth-vader {
+	@include common-biography($biography: 1);
+}
+
+/* Jorge Jones readio */
+
+#jorge-jones {
+	@include common-biography($biography: 2);
+}
+
+/* Yoda radio */
+
+#yoda {
+	@include common-biography($biography: 3);
+}
+
+/* Darth Sidious radio */
+
+#darth-sidious {
+	@include common-biography($biography: 4);
+}

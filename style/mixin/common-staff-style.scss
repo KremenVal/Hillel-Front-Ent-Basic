@@ -1,0 +1,51 @@
+@mixin common-biography($biography: 1, $margin-right: 6.5625rem, $margin-right-other: 1rem, $scale: 1.554, $magin-top: 9.25rem, $max-height: 44.875rem) {
+	&:checked ~ .our-team-content {
+		height: $max-height;
+	}
+
+	&:checked ~ .our-team-content .info-about-team {
+		margin-top: $magin-top;
+	}
+
+	@for $i from 1 through 4 {
+		@if ($i == $biography) {
+			&:checked ~ .our-team-content .info-about-team .staff-biography div:nth-child(#{$i}) {
+				@include position($position: absolute, $left: 0);
+		
+				opacity: 1;
+			}
+
+			&:checked ~ .our-team-content .info-about-team .photo-team label:nth-child(#{$i}) {
+				.photo-background {
+					@include sizes($height: 111.37%, $width: 101%);
+		
+					margin-top: -0.75rem;
+					margin-left: 0.5625rem;
+				}
+		
+				margin-right: $margin-right;
+				transform-origin: bottom left;
+				transform: scale($scale);
+			}
+		} @else {
+			&:checked ~ .our-team-content .info-about-team .staff-biography div:nth-child(#{$i}) {
+				@include position($position: absolute, $left: -110%);
+		
+				opacity: 0;
+			}
+
+			&:checked ~ .our-team-content .info-about-team .photo-team label:nth-child(#{$i}) {
+				.photo-background {
+					@include sizes($height: 100%, $width: 100%);
+		
+					margin-top: 0;
+					margin-left: 0;
+				}
+		
+				margin-right: $margin-right-other;
+				transform-origin: bottom left;
+				transform: scale(1);
+			}
+		}
+	}
+}

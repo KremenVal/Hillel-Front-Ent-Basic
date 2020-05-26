@@ -19,9 +19,7 @@
 					<img class="image-close" src="../images/header-container/form-close.png" alt="Form close">
 				</label>
 				<span><span>contact</span> us!</span>
-				<p>
-					Please leave your details and our manager will contact you within an hour.
-				</p>
+				<p>Please leave your details and our manager will contact you within an hour.</p>
 				<label class="info-input" for="name">
 					<p>Name:</p>
 					<input type="text" name="name" id="name" minlength="3" maxlength="15" placeholder="Gregory Simmmons" required>
@@ -60,13 +58,13 @@
 				<label class="btn-contact" for="contact-active">
 					<span>CONTACT US</span>
 				</label>
-				<a class="btn-book" href="#home">BOOK NOW</a>
+				<a class="btn-book" href="#book-now">BOOK NOW</a>
 			</div>
 		</div>
 		<header class="header-container">
 			<div class="header-content wrapper">
 				<div class="logo">
-					<img src="../images/header-container/logo.png" alt="Logo">
+					<a href="#home"><img src="../images/header-container/logo.png" alt="Logo"></a>
 				</div>
 				<label class="menu-button" for="menu">
 					<span></span>
@@ -86,7 +84,7 @@
 					<label class="btn-contact" for="contact-active">
 						<span>CONTACT US</span>
 					</label>
-					<a class="btn-book" href="#">BOOK NOW</a>
+					<a class="btn-book" href="#book-now">BOOK NOW</a>
 				</div>
 			</div>
 		</header>
@@ -95,7 +93,7 @@
 			<div class="intorduction-content wrapper">
 				<img src="../images/introduction-container/logo-introduction.png" alt="Logo">
 				<p>Our barbershop is a place of style and mutual understanding in which it is pleasant to spend time.</p>
-				<a href="/">BOOK NOW</a>
+				<a href="#book-now">BOOK NOW</a>
 			</div>
 		</div>
 		<div class="salon-background"></div>
@@ -159,6 +157,119 @@
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="our-team-container">
+			<input type="radio" name="staff" id="darth-vader">
+			<input type="radio" name="staff" id="jorge-jones">
+			<input type="radio" name="staff" id="yoda">
+			<input type="radio" name="staff" id="darth-sidious">
+			<div class="our-team-content wrapper">
+				<div class="our-team">
+					<img src="../images/our-team-container/ellipse-our-team.png" alt="Eclipse">
+					<span>Our team</span>
+				</div>
+				<div class="info-about-team">
+					<div class="photo-team">
+						<label for="darth-vader">
+							<div class="photo-background"></div>
+							<img class="staff" src="../images/our-team-container/darth-vader.png" alt="Darth Vader">
+						</label>
+						<label for="jorge-jones">
+							<div class="photo-background"></div>
+							<img class="staff" src="../images/our-team-container/jorge-jones.png" alt="Jorge Jones">
+						</label>
+						<label for="yoda">
+							<div class="photo-background"></div>
+							<img class="staff" src="../images/our-team-container/yoda.png" alt="Yoda">
+						</label>
+						<label for="darth-sidious">
+							<div class="photo-background"></div>
+							<img class="staff" src="../images/our-team-container/darth-sidious.png" alt="Darth Sidious">
+						</label>
+						<div class="next-staff">
+							<img src="../images/our-team-container/next-staff.png" alt="Next staff">
+						</div>
+					</div>
+					<div class="staff-biography">
+						<div class="darth-vader-biography">
+							<h2>Darth Vader</h2>
+							<span>- How did you become a barber?</span>
+							<span>- I decided to master the creative profession. And he found himself precisely in this. So my life has changed dramatically.</span>
+							<span>- What exactly do you like in your profession? Why are you blissing?</span>
+							<span>- I like to work in a men's team, communicating with interesting people.</span>
+							<span>- Why should a person who wants a haircut choose you?</span>
+							<span>- Because I'm old and charismatic.</span>
+						</div>
+						<div class="jorge-jones-biography">
+							<h2>Jorge Jones</h2>
+							<span>- How did you become a barber?</span>
+							<span>- I decided to master the creative profession. And he found himself precisely in this. So my life has changed dramatically.</span>
+							<span>- What exactly do you like in your profession? Why are you blissing?</span>
+							<span>- I like to work in a men's team, communicating with interesting people.</span>
+							<span>- Why should a person who wants a haircut choose you?</span>
+							<span>- Because I'm old and charismatic.</span>
+						</div>
+						<div class="yoda-biography">
+							<h2>Yoda</h2>
+							<span>- How did you become a barber?</span>
+							<span>- I decided to master the creative profession. And he found himself precisely in this. So my life has changed dramatically.</span>
+							<span>- What exactly do you like in your profession? Why are you blissing?</span>
+							<span>- I like to work in a men's team, communicating with interesting people.</span>
+							<span>- Why should a person who wants a haircut choose you?</span>
+							<span>- Because I'm old and charismatic.</span>
+						</div>
+						<div class="darth-sidious-biography">
+							<h2>Darth Sidious</h2>
+							<span>- How did you become a barber?</span>
+							<span>- I decided to master the creative profession. And he found himself precisely in this. So my life has changed dramatically.</span>
+							<span>- What exactly do you like in your profession? Why are you blissing?</span>
+							<span>- I like to work in a men's team, communicating with interesting people.</span>
+							<span>- Why should a person who wants a haircut choose you?</span>
+							<span>- Because I'm old and charismatic.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="booking-container">
+			<a name="book-now"></a>
+			<div class="booking-content wrapper">
+				<form action="/html/" method="POST" class="booking">
+					<h2>Book an appointment right now!</h2>
+					<span>Please complete all these fields.</span>
+					<label class="info-input" for="name-booking">
+						<p>Name:</p>
+						<input type="text" name="name-booking" id="name-booking" minlength="3" maxlength="15" placeholder="Gregory Simmmons" required>
+					</label>
+					<label class="info-input" for="date">
+						<p>Date:</p>
+						<input type="text" name="date" id="date" minlength="9" maxlength="30" placeholder="Enter date" required>
+					</label>
+					<label class="info-input" for="time">
+						<p>Time:</p>
+						<input type="tel" name="time" id="time" minlength="10" maxlength="10" placeholder="Enter time">
+					</label>
+					<label for="master-radio-1">
+						<p>Choose a master:</p>
+						<div class="master-card-radio">
+							<input type="radio" name="master-radio" id="master-radio-1">
+							<input type="radio" name="master-radio" id="master-radio-2">
+							<input type="radio" name="master-radio" id="master-radio-3">
+							<input type="radio" name="master-radio" id="master-radio-4">
+						</div>
+					</label>
+					<label for="master-checkbox-1">
+						<p>Choose a master:</p>
+						<div class="master-card-checkbox">
+							<input type="checkbox" name="master-checkbox" id="master-checkbox-1">
+							<input type="checkbox" name="master-checkbox" id="master-checkbox-2">
+							<input type="checkbox" name="master-checkbox" id="master-checkbox-3">
+							<input type="checkbox" name="master-checkbox" id="master-checkbox-4">
+						</div>
+					</label>
+					<button>Book now</button>
+				</form>
 			</div>
 		</div>
 	</div>
